@@ -1,23 +1,19 @@
-/* ====== VARIABLES ====== */
+/* MAIN STYLES */
 :root {
     --primary-bg: #1a1f36;
     --secondary-bg: #2d3748;
     --card-bg: #2d3748;
     --border-color: #4a5568;
     --hover-color: #4a5568;
-    
     --text-primary: #f7fafc;
     --text-secondary: #e2e8f0;
     --text-muted: #a0aec0;
-    
     --accent-blue: #63b3ed;
     --accent-green: #68d391;
-    
     --border-radius: 12px;
     --card-radius: 16px;
 }
 
-/* ====== RESET & BASE ====== */
 * {
     margin: 0;
     padding: 0;
@@ -34,7 +30,7 @@ html, body {
     overflow-x: hidden;
 }
 
-/* ====== HEADER ====== */
+/* HEADER */
 header {
     background: linear-gradient(135deg, #1a1f36 0%, #2d3748 100%);
     color: var(--text-primary);
@@ -71,7 +67,7 @@ header p {
     border-radius: 2px;
 }
 
-/* ====== NAVIGATION ====== */
+/* NAVIGATION */
 button.openbtn {
     position: absolute;
     top: 1rem;
@@ -168,7 +164,7 @@ nav.sidenav ul li a[aria-current="page"] {
     border-left: 3px solid var(--accent-blue);
 }
 
-/* ====== MAIN CONTENT ====== */
+/* MAIN CONTENT */
 main {
     padding: 2rem 1rem;
     width: 100%;
@@ -176,7 +172,7 @@ main {
     margin: 0 auto;
 }
 
-/* ====== INTRO SECTION ====== */
+/* INTRO SECTION */
 .intro-section {
     text-align: center;
     max-width: 800px;
@@ -197,7 +193,7 @@ main {
     line-height: 1.6;
 }
 
-/* ====== BOOK SECTIONS ====== */
+/* BOOK SECTIONS */
 .book-section {
     margin-bottom: 2.5rem;
     width: 100%;
@@ -219,7 +215,7 @@ main {
     color: var(--text-muted);
 }
 
-/* ====== BOOK GRID ====== */
+/* BOOK GRID */
 .book-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -227,7 +223,7 @@ main {
     width: 100%;
 }
 
-/* ====== BOOK CARD ====== */
+/* BOOK CARD */
 .book-card {
     display: flex;
     flex-direction: column;
@@ -316,7 +312,7 @@ main {
     border: 1px solid rgba(99, 179, 237, 0.2);
 }
 
-/* ====== RATING BADGES ====== */
+/* RATING BADGES */
 .rating-badge {
     position: absolute;
     top: 10px;
@@ -335,11 +331,7 @@ main {
     z-index: 2;
 }
 
-.rating-tbd {
-    background: #6b7280;
-}
-
-/* Rating colors */
+.rating-tbd { background: #6b7280; }
 .rating-10 { background: #16a34a; }
 .rating-9 { background: #22c55e; color: black; }
 .rating-8 { background: #4ade80; color: black; }
@@ -351,7 +343,7 @@ main {
 .rating-2 { background: #f87171; }
 .rating-1 { background: #dc2626; }
 
-/* ====== CATEGORY LINKS ====== */
+/* CATEGORY LINKS */
 .category-links {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -393,46 +385,13 @@ main {
     color: var(--text-muted);
 }
 
-/* ====== FOOTER ====== */
-footer {
-    padding: 1.5rem 1rem;
-    background: var(--secondary-bg);
-    border-top: 1px solid var(--border-color);
-    color: var(--text-secondary);
-    text-align: center;
-}
-
-.footer-decoration {
-    height: 3px;
-    background: linear-gradient(90deg, #3182ce, var(--accent-blue), #3182ce);
-    width: 100px;
-    margin: 0 auto 1rem;
-    border-radius: 2px;
-}
-
-footer p {
-    margin-bottom: 0.5rem;
-    font-size: 0.9rem;
-}
-
-.footer-quote {
-    font-style: italic;
-    color: var(--accent-blue);
-    max-width: 600px;
-    margin: 0.5rem auto 0;
-    font-size: 0.9rem;
-    line-height: 1.4;
-}
-
-/* ====== REVIEW PAGE STYLES ====== */
-
+/* REVIEW PAGE STYLES */
 .review-main {
     max-width: 900px;
     margin: 0 auto;
     padding: 2rem 1.5rem;
 }
 
-/* Review Header */
 .review-header {
     margin-bottom: 3rem;
     padding-bottom: 2rem;
@@ -456,10 +415,12 @@ footer p {
     font-weight: 700;
     font-size: 1.3rem;
     color: white;
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
     border: 4px solid var(--card-bg);
     flex-shrink: 0;
 }
+
+.rating-display.rating-8 { background: linear-gradient(135deg, #4ade80, #22c55e); color: black; }
 
 .review-title-section {
     flex-grow: 1;
@@ -524,7 +485,7 @@ footer p {
     font-weight: 600;
 }
 
-/* Book Cover Section */
+/* BOOK COVER SECTION */
 .book-cover-section {
     margin-bottom: 3rem;
 }
@@ -540,7 +501,7 @@ footer p {
     width: 100%;
     height: auto;
     border-radius: var(--border-radius);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
     border: 1px solid var(--border-color);
 }
 
@@ -574,7 +535,7 @@ footer p {
     font-weight: 600;
 }
 
-/* Review Content */
+/* REVIEW CONTENT */
 .review-content {
     font-size: 1.1rem;
     line-height: 1.7;
@@ -603,7 +564,6 @@ footer p {
     font-weight: 600;
 }
 
-/* Analysis Points */
 .analysis-point {
     background: rgba(99, 179, 237, 0.05);
     border-left: 4px solid var(--accent-blue);
@@ -619,7 +579,6 @@ footer p {
     font-weight: 600;
 }
 
-/* Philosophy Blocks */
 .philosophy-block {
     background: rgba(139, 92, 246, 0.05);
     border: 1px solid rgba(139, 92, 246, 0.2);
@@ -635,7 +594,6 @@ footer p {
     font-weight: 600;
 }
 
-/* Critique Section */
 .critique-section {
     background: rgba(239, 68, 68, 0.03);
     border: 1px solid rgba(239, 68, 68, 0.1);
@@ -663,7 +621,6 @@ footer p {
     font-weight: 600;
 }
 
-/* Conclusion Section */
 .conclusion-section {
     background: rgba(104, 211, 145, 0.05);
     border: 1px solid rgba(104, 211, 145, 0.1);
@@ -691,7 +648,7 @@ footer p {
     line-height: 1.6;
 }
 
-/* Related Books */
+/* RELATED BOOKS */
 .related-books {
     margin-top: 4rem;
     padding-top: 2rem;
@@ -728,66 +685,38 @@ footer p {
     transform: translateY(-2px);
 }
 
-/* Responsive Review Page */
-@media (max-width: 768px) {
-    .review-main {
-        padding: 1.5rem 1rem;
-    }
-    
-    .review-meta {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    
-    .rating-display {
-        align-self: center;
-    }
-    
-    .review-title-section h1 {
-        font-size: 1.8rem;
-        text-align: center;
-    }
-    
-    .book-meta-line {
-        text-align: center;
-    }
-    
-    .review-tags {
-        justify-content: center;
-    }
-    
-    .review-stats {
-        grid-template-columns: 1fr;
-    }
-    
-    .book-cover-container {
-        grid-template-columns: 1fr;
-    }
-    
-    .review-section h2 {
-        font-size: 1.5rem;
-    }
-    
-    .related-links {
-        flex-direction: column;
-    }
+/* FOOTER */
+footer {
+    padding: 1.5rem 1rem;
+    background: var(--secondary-bg);
+    border-top: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    text-align: center;
 }
 
-@media (max-width: 480px) {
-    .review-title-section h1 {
-        font-size: 1.5rem;
-    }
-    
-    .book-cover-section {
-        margin-bottom: 2rem;
-    }
-    
-    .review-section {
-        margin-bottom: 2rem;
-    }
-    }
+.footer-decoration {
+    height: 3px;
+    background: linear-gradient(90deg, #3182ce, var(--accent-blue), #3182ce);
+    width: 100px;
+    margin: 0 auto 1rem;
+    border-radius: 2px;
+}
 
-/* ====== SCROLL TO TOP BUTTON ====== */
+footer p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.footer-quote {
+    font-style: italic;
+    color: var(--accent-blue);
+    max-width: 600px;
+    margin: 0.5rem auto 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* SCROLL TO TOP */
 #scrollToTopBtn {
     display: none;
     position: fixed;
@@ -813,7 +742,7 @@ footer p {
     transform: scale(1.1);
 }
 
-/* ====== RESPONSIVE DESIGN ====== */
+/* RESPONSIVE */
 @media (max-width: 768px) {
     header h1 {
         font-size: 1.5rem;
@@ -858,6 +787,48 @@ footer p {
     .book-section {
         margin-bottom: 2rem;
     }
+    
+    .review-main {
+        padding: 1.5rem 1rem;
+    }
+    
+    .review-meta {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .rating-display {
+        align-self: center;
+    }
+    
+    .review-title-section h1 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    
+    .book-meta-line {
+        text-align: center;
+    }
+    
+    .review-tags {
+        justify-content: center;
+    }
+    
+    .review-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .book-cover-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .review-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .related-links {
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 480px) {
@@ -879,9 +850,21 @@ footer p {
         width: 36px;
         height: 36px;
     }
+    
+    .review-title-section h1 {
+        font-size: 1.5rem;
+    }
+    
+    .book-cover-section {
+        margin-bottom: 2rem;
+    }
+    
+    .review-section {
+        margin-bottom: 2rem;
+    }
 }
 
-/* ====== CUSTOM SCROLLBAR ====== */
+/* UTILITIES */
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -899,7 +882,6 @@ footer p {
     background: var(--accent-blue);
 }
 
-/* ====== FOCUS STATES ====== */
 button:focus,
 a:focus {
     outline: 2px solid var(--accent-blue);
