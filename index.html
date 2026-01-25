@@ -11,26 +11,21 @@
 </head>
 
 <body>
-    <!-- Mobile Menu Button -->
-    <div class="menu-toggle" id="menuToggle">
-        <span></span>
-    </div>
-    
-    <!-- Mobile Menu Overlay -->
-    <div class="menu-overlay" id="menuOverlay"></div>
-
-    <!-- Header -->
-    <header class="site-header">
-        <a href="index.html" class="site-title">Olem's Reading List</a>
-        <p class="site-subtitle">A curated collection of books I've read.</p>
+    <!-- Header with mobile menu -->
+    <header>
+        <h1>Olem's Reading List</h1>
+        <p>Showcasing books I've read with reviews and analysis.</p>
+        <div class="header-decoration"></div>
+        <button class="openbtn" onclick="openNav()" aria-label="Open navigation menu">☰ Menu</button>
     </header>
 
-    <!-- Sidebar Navigation -->
-    <nav class="sidebar" id="sidebar">
-        <ul class="genre-list">
-            <li><a href="index.html" class="active">🏠 Home</a></li>
+    <!-- Clean sidebar with categories -->
+    <nav id="mySidenav" class="sidenav">
+        <button class="closebtn" onclick="closeNav()" aria-label="Close navigation menu">&times;</button>
+        <ul>
+            <li><a href="index.html" aria-current="page">🏠 Home</a></li>
             
-            <li class="nav-category">Nonfiction</li>
+            <li class="category-title">📚 Nonfiction</li>
             <li><a href="pages/biographies-memoirs.html">👤 Biographies & Memoirs</a></li>
             <li><a href="pages/business-economics.html">📈 Business & Economics</a></li>
             <li><a href="pages/computer-science.html">💻 Computer Science</a></li>
@@ -45,120 +40,198 @@
             <li><a href="pages/psychology-sociology.html">🧪 Psychology & Sociology</a></li>
             <li><a href="pages/science-technology.html">🔬 Science & Technology</a></li>
             
-            <li class="nav-category">Fiction</li>
+            <li class="category-title">📖 Fiction</li>
             <li><a href="pages/fiction-literature.html">📖 Fiction & Literature</a></li>
             <li><a href="pages/fiction-science-fiction.html">🚀 Science Fiction</a></li>
             <li><a href="pages/fiction-fantasy.html">🧙 Fantasy</a></li>
             <li><a href="pages/fiction-mystery-thriller.html">🔍 Mystery & Thriller</a></li>
             <li><a href="pages/fiction-classics.html">🏛️ Classics</a></li>
-            
-            <li class="nav-category">Other</li>
-            <li><a href="pages/creativity-design.html">🎨 Creativity & Design</a></li>
-            <li><a href="pages/education-learning.html">🎓 Education & Learning</a></li>
-            <li><a href="pages/productivity-work.html">⚡ Productivity & Work</a></li>
-            <li><a href="pages/travel-culture.html">🌍 Travel & Culture</a></li>
         </ul>
     </nav>
 
-    <!-- Main Content -->
-    <main class="main-content">
+    <!-- Main content - full width, no margin -->
+    <main>
         <!-- Introduction -->
-        <section class="home-intro">
-            <h1>Olem's Reading List</h1>
-            <p class="tagline">Thoughtful reviews and analysis of books worth reading</p>
-            <p>This is a personal collection of books I've read, complete with ratings, dates read, and detailed reviews. Each book is analyzed for its insights, impact, and practical value.</p>
+        <section class="intro-section">
+            <div class="intro-content">
+                <h2>Welcome to My Reading Journey</h2>
+                <p>This is a collection of books I've read, complete with ratings, dates read, and detailed reviews. Each book is analyzed for its insights, impact, and practical value.</p>
+            </div>
         </section>
 
-        <!-- Currently Reading Section -->
-        <section class="book-section" aria-labelledby="current-reading">
+        <!-- Currently Reading -->
+        <section class="book-section">
             <div class="section-header">
-                <h2 id="current-reading">📚 Currently Reading</h2>
+                <h2>📖 Currently Reading</h2>
                 <p>What's on my reading desk right now</p>
             </div>
+            
             <div class="book-grid">
                 <article class="book-card">
-                    <div class="reading-status">In Progress</div>
+                    <div class="current-badge">Reading Now</div>
                     <div class="rating-badge rating-tbd">-</div>
-                    <img src="img/computer-science/just-for-fun.jpg" alt="Just For Fun Cover" loading="lazy">
-                    <div class="book-title">
-                        <h3>Just For Fun</h3>
-                        <p class="book-author">by Linus Torvalds</p>
+                    
+                    <div class="book-cover">
+                        <img src="img/computer-science/just-for-fun.jpg" alt="Just For Fun by Linus Torvalds" loading="lazy">
                     </div>
-                    <div class="book-meta">
-                        <span class="date-started">📅 Started: March 2025</span>
-                        <span class="book-pages">📖 288 pages</span>
+                    
+                    <div class="book-info">
+                        <h3 class="book-title">Just For Fun</h3>
+                        <p class="book-author">Linus Torvalds</p>
+                        
+                        <div class="book-meta">
+                            <span class="meta-item">
+                                <span class="meta-label">Started</span>
+                                <strong>March 2025</strong>
+                            </span>
+                            <span class="meta-item">
+                                <span class="meta-label">Pages</span>
+                                <strong>288</strong>
+                            </span>
+                        </div>
+                        
+                        <div class="book-tags">
+                            <span class="book-tag">Open Source</span>
+                            <span class="book-tag">Memoir</span>
+                            <span class="book-tag">Tech</span>
+                        </div>
+                        
+                        <a href="reviews/just-for-fun.html" class="review-button">
+                            Read Full Review →
+                        </a>
                     </div>
-                    <footer class="book-card-footer">Open Source • Memoir • Tech</footer>
-                    <a href="reviews/just-for-fun.html" class="review-link">
-                        Read Review & Analysis →
-                    </a>
                 </article>
             </div>
         </section>
 
-        <!-- Category Previews -->
-        <section class="book-section" aria-labelledby="browse-categories">
+        <!-- Featured Books -->
+        <section class="book-section">
             <div class="section-header">
-                <h2 id="browse-categories">🔍 Browse by Category</h2>
-                <p>Explore books by subject area</p>
+                <h2>⭐ Featured Books</h2>
+                <p>Notable reads worth checking out</p>
             </div>
-            <div class="category-grid">
-                <a href="pages/computer-science.html" class="category-card">
-                    <div class="category-icon">💻</div>
-                    <h3>Computer Science</h3>
-                    <p>Algorithms, systems, theory</p>
-                </a>
-                <a href="pages/philosophy.html" class="category-card">
-                    <div class="category-icon">🤔</div>
-                    <h3>Philosophy</h3>
-                    <p>Critical thinking, ethics, logic</p>
-                </a>
-                <a href="pages/personal-development.html" class="category-card">
-                    <div class="category-icon">🧠</div>
-                    <h3>Personal Development</h3>
-                    <p>Self-improvement, habits</p>
-                </a>
-                <a href="pages/fiction-literature.html" class="category-card">
-                    <div class="category-icon">📖</div>
-                    <h3>Fiction & Literature</h3>
-                    <p>Novels, short stories, classics</p>
-                </a>
+            
+            <div class="book-grid">
+                <!-- Example featured book 1 -->
+                <article class="book-card">
+                    <div class="rating-badge rating-9">9</div>
+                    
+                    <div class="book-cover">
+                        <img src="img/placeholders/book1.jpg" alt="Featured Book 1" loading="lazy">
+                    </div>
+                    
+                    <div class="book-info">
+                        <h3 class="book-title">The Psychology of Money</h3>
+                        <p class="book-author">Morgan Housel</p>
+                        
+                        <div class="book-meta">
+                            <span class="meta-item">
+                                <span class="meta-label">Read</span>
+                                <strong>Jan 2024</strong>
+                            </span>
+                            <span class="meta-item">
+                                <span class="meta-label">Rating</span>
+                                <strong>9/10</strong>
+                            </span>
+                        </div>
+                        
+                        <div class="book-tags">
+                            <span class="book-tag">Finance</span>
+                            <span class="book-tag">Psychology</span>
+                            <span class="book-tag">Behavioral</span>
+                        </div>
+                        
+                        <a href="reviews/psychology-of-money.html" class="review-button">
+                            Read Review →
+                        </a>
+                    </div>
+                </article>
+                
+                <!-- Example featured book 2 -->
+                <article class="book-card">
+                    <div class="rating-badge rating-8">8</div>
+                    
+                    <div class="book-cover">
+                        <img src="img/placeholders/book2.jpg" alt="Featured Book 2" loading="lazy">
+                    </div>
+                    
+                    <div class="book-info">
+                        <h3 class="book-title">Dopamine Nation</h3>
+                        <p class="book-author">Anna Lembke</p>
+                        
+                        <div class="book-meta">
+                            <span class="meta-item">
+                                <span class="meta-label">Read</span>
+                                <strong>Dec 2023</strong>
+                            </span>
+                            <span class="meta-item">
+                                <span class="meta-label">Rating</span>
+                                <strong>8/10</strong>
+                            </span>
+                        </div>
+                        
+                        <div class="book-tags">
+                            <span class="book-tag">Neuroscience</span>
+                            <span class="book-tag">Addiction</span>
+                            <span class="book-tag">Wellness</span>
+                        </div>
+                        
+                        <a href="reviews/dopamine-nation.html" class="review-button">
+                            Read Review →
+                        </a>
+                    </div>
+                </article>
             </div>
         </section>
 
-        <!-- Reading Philosophy -->
-        <section class="book-section" aria-labelledby="reading-philosophy">
+        <!-- Category Quick Links -->
+        <section class="book-section">
             <div class="section-header">
-                <h2 id="reading-philosophy">📖 My Reading Philosophy</h2>
-                <p>How I choose and evaluate books</p>
+                <h2>📂 Browse Categories</h2>
+                <p>Explore books by topic</p>
             </div>
-            <div class="philosophy-content">
-                <div class="philosophy-point">
-                    <h3>Quality Over Quantity</h3>
-                    <p>I'd rather read one great book thoroughly than ten mediocre ones. Each review represents careful reading and reflection.</p>
-                </div>
-                <div class="philosophy-point">
-                    <h3>Practical Value</h3>
-                    <p>Books should either change how I think or how I act. I look for insights that can be applied in real life.</p>
-                </div>
-                <div class="philosophy-point">
-                    <h3>Diverse Perspectives</h3>
-                    <p>Reading across genres, time periods, and cultures to avoid intellectual echo chambers.</p>
-                </div>
-                <div class="philosophy-point">
-                    <h3>Critical Engagement</h3>
-                    <p>Even the best books deserve scrutiny. My reviews analyze both strengths and weaknesses.</p>
-                </div>
+            
+            <div class="category-links">
+                <a href="pages/computer-science.html" class="category-link">
+                    <span class="category-icon">💻</span>
+                    <div class="category-info">
+                        <h3>Computer Science</h3>
+                        <p>Algorithms, systems, theory</p>
+                    </div>
+                </a>
+                
+                <a href="pages/philosophy.html" class="category-link">
+                    <span class="category-icon">🤔</span>
+                    <div class="category-info">
+                        <h3>Philosophy</h3>
+                        <p>Critical thinking, ethics, logic</p>
+                    </div>
+                </a>
+                
+                <a href="pages/finance-wealth.html" class="category-link">
+                    <span class="category-icon">💰</span>
+                    <div class="category-info">
+                        <h3>Finance & Wealth</h3>
+                        <p>Investing, money management</p>
+                    </div>
+                </a>
+                
+                <a href="pages/fiction-literature.html" class="category-link">
+                    <span class="category-icon">📖</span>
+                    <div class="category-info">
+                        <h3>Fiction & Literature</h3>
+                        <p>Novels, short stories, classics</p>
+                    </div>
+                </a>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="site-footer">
-        <div class="footer-content">
-            <p class="footer-quote">"A reader lives a thousand lives before he dies. The man who never reads lives only one." — George R.R. Martin</p>
-            <p class="footer-copyright">Olem's Reading List &copy; <span id="current-year"></span></p>
-        </div>
+    <footer>
+        <div class="footer-decoration"></div>
+        <p>&copy; 2025 Olem's Reading List. All rights reserved.</p>
+        <p class="footer-quote">"The more that you read, the more things you will know. The more that you learn, the more places you'll go." — Dr. Seuss</p>
     </footer>
 
     <!-- Scroll to Top Button -->
