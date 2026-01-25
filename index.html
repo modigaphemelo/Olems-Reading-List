@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Olem's Reading List</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="A curated collection of books I've read, with reviews and analysis.">
+    <link rel="icon" href="olem.png" sizes="any">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Mobile Menu Button -->
+    <div class="menu-toggle" id="menuToggle">
+        <span></span>
+    </div>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <a href="index.html" class="site-title">Olem's Reading List</a>
+        <p class="site-subtitle">A curated collection of books I've read.</p>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar" id="sidebar">
+        <ul class="genre-list">
+            <li><a href="index.html" class="active">🏠 Home</a></li>
+            
+            <li class="nav-category">Nonfiction</li>
+            <li><a href="pages/biographies-memoirs.html">👤 Biographies & Memoirs</a></li>
+            <li><a href="pages/business-economics.html">📈 Business & Economics</a></li>
+            <li><a href="pages/computer-science.html">💻 Computer Science</a></li>
+            <li><a href="pages/data-structures-algorithms.html">📊 Data Structures & Algorithms</a></li>
+            <li><a href="pages/finance-wealth.html">💰 Finance & Wealth</a></li>
+            <li><a href="pages/history-politics.html">📜 History & Politics</a></li>
+            <li><a href="pages/mathematics.html">🔢 Mathematics</a></li>
+            <li><a href="pages/personal-development.html">🧠 Personal Development</a></li>
+            <li><a href="pages/philosophy.html">🤔 Philosophy</a></li>
+            <li><a href="pages/physical-exercise-health.html">💪 Physical Exercise & Health</a></li>
+            <li><a href="pages/programming.html">⚙️ Programming</a></li>
+            <li><a href="pages/psychology-sociology.html">🧪 Psychology & Sociology</a></li>
+            <li><a href="pages/science-technology.html">🔬 Science & Technology</a></li>
+            
+            <li class="nav-category">Fiction</li>
+            <li><a href="pages/fiction-literature.html">📖 Fiction & Literature</a></li>
+            <li><a href="pages/fiction-science-fiction.html">🚀 Science Fiction</a></li>
+            <li><a href="pages/fiction-fantasy.html">🧙 Fantasy</a></li>
+            <li><a href="pages/fiction-mystery-thriller.html">🔍 Mystery & Thriller</a></li>
+            <li><a href="pages/fiction-classics.html">🏛️ Classics</a></li>
+            
+            <li class="nav-category">Other</li>
+            <li><a href="pages/creativity-design.html">🎨 Creativity & Design</a></li>
+            <li><a href="pages/education-learning.html">🎓 Education & Learning</a></li>
+            <li><a href="pages/productivity-work.html">⚡ Productivity & Work</a></li>
+            <li><a href="pages/travel-culture.html">🌍 Travel & Culture</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Introduction -->
+        <section class="home-intro">
+            <h1>Olem's Reading List</h1>
+            <p class="tagline">Thoughtful reviews and analysis of books worth reading</p>
+            <p>This is a personal collection of books I've read, complete with ratings, dates read, and detailed reviews. Each book is analyzed for its insights, impact, and practical value.</p>
+        </section>
+
+        <!-- Currently Reading Section -->
+        <section class="book-section" aria-labelledby="current-reading">
+            <div class="section-header">
+                <h2 id="current-reading">📚 Currently Reading</h2>
+                <p>What's on my reading desk right now</p>
+            </div>
+            <div class="book-grid">
+                <article class="book-card">
+                    <div class="reading-status">In Progress</div>
+                    <div class="rating-badge rating-tbd">-</div>
+                    <img src="img/computer-science/just-for-fun.jpg" alt="Just For Fun Cover" loading="lazy">
+                    <div class="book-title">
+                        <h3>Just For Fun</h3>
+                        <p class="book-author">by Linus Torvalds</p>
+                    </div>
+                    <div class="book-meta">
+                        <span class="date-started">📅 Started: March 2025</span>
+                        <span class="book-pages">📖 288 pages</span>
+                    </div>
+                    <footer class="book-card-footer">Open Source • Memoir • Tech</footer>
+                    <a href="reviews/just-for-fun.html" class="review-link">
+                        Read Review & Analysis →
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Category Previews -->
+        <section class="book-section" aria-labelledby="browse-categories">
+            <div class="section-header">
+                <h2 id="browse-categories">🔍 Browse by Category</h2>
+                <p>Explore books by subject area</p>
+            </div>
+            <div class="category-grid">
+                <a href="pages/computer-science.html" class="category-card">
+                    <div class="category-icon">💻</div>
+                    <h3>Computer Science</h3>
+                    <p>Algorithms, systems, theory</p>
+                </a>
+                <a href="pages/philosophy.html" class="category-card">
+                    <div class="category-icon">🤔</div>
+                    <h3>Philosophy</h3>
+                    <p>Critical thinking, ethics, logic</p>
+                </a>
+                <a href="pages/personal-development.html" class="category-card">
+                    <div class="category-icon">🧠</div>
+                    <h3>Personal Development</h3>
+                    <p>Self-improvement, habits</p>
+                </a>
+                <a href="pages/fiction-literature.html" class="category-card">
+                    <div class="category-icon">📖</div>
+                    <h3>Fiction & Literature</h3>
+                    <p>Novels, short stories, classics</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Reading Philosophy -->
+        <section class="book-section" aria-labelledby="reading-philosophy">
+            <div class="section-header">
+                <h2 id="reading-philosophy">📖 My Reading Philosophy</h2>
+                <p>How I choose and evaluate books</p>
+            </div>
+            <div class="philosophy-content">
+                <div class="philosophy-point">
+                    <h3>Quality Over Quantity</h3>
+                    <p>I'd rather read one great book thoroughly than ten mediocre ones. Each review represents careful reading and reflection.</p>
+                </div>
+                <div class="philosophy-point">
+                    <h3>Practical Value</h3>
+                    <p>Books should either change how I think or how I act. I look for insights that can be applied in real life.</p>
+                </div>
+                <div class="philosophy-point">
+                    <h3>Diverse Perspectives</h3>
+                    <p>Reading across genres, time periods, and cultures to avoid intellectual echo chambers.</p>
+                </div>
+                <div class="philosophy-point">
+                    <h3>Critical Engagement</h3>
+                    <p>Even the best books deserve scrutiny. My reviews analyze both strengths and weaknesses.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p class="footer-quote">"A reader lives a thousand lives before he dies. The man who never reads lives only one." — George R.R. Martin</p>
+            <p class="footer-copyright">Olem's Reading List &copy; <span id="current-year"></span></p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 19V5M5 12l7-7 7 7"/>
+        </svg>
+    </button>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
