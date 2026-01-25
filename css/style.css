@@ -424,6 +424,369 @@ footer p {
     line-height: 1.4;
 }
 
+/* ====== REVIEW PAGE STYLES ====== */
+
+.review-main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+/* Review Header */
+.review-header {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.review-meta {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.rating-display {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: white;
+    box-shadow: var(--shadow-md);
+    border: 4px solid var(--card-bg);
+    flex-shrink: 0;
+}
+
+.review-title-section {
+    flex-grow: 1;
+}
+
+.review-title-section h1 {
+    font-size: 2.2rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.book-meta-line {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.review-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.review-tag {
+    background: rgba(99, 179, 237, 0.15);
+    color: var(--accent-blue);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid rgba(99, 179, 237, 0.3);
+}
+
+.review-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    background: rgba(99, 179, 237, 0.05);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.25rem;
+}
+
+.stat-value {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* Book Cover Section */
+.book-cover-section {
+    margin-bottom: 3rem;
+}
+
+.book-cover-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.book-cover-image {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-color);
+}
+
+.book-quick-info {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+}
+
+.book-quick-info h3 {
+    color: var(--accent-blue);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.book-quick-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.book-quick-info li {
+    margin-bottom: 0.75rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.book-quick-info strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* Review Content */
+.review-content {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+.review-section {
+    margin-bottom: 3rem;
+}
+
+.review-section h2 {
+    font-size: 1.8rem;
+    color: var(--accent-blue);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(99, 179, 237, 0.3);
+    font-weight: 600;
+}
+
+.review-section p {
+    margin-bottom: 1.25rem;
+}
+
+.review-section strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* Analysis Points */
+.analysis-point {
+    background: rgba(99, 179, 237, 0.05);
+    border-left: 4px solid var(--accent-blue);
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+.analysis-point h3 {
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+/* Philosophy Blocks */
+.philosophy-block {
+    background: rgba(139, 92, 246, 0.05);
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: var(--border-radius);
+}
+
+.philosophy-block h3 {
+    color: #8b5cf6;
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+/* Critique Section */
+.critique-section {
+    background: rgba(239, 68, 68, 0.03);
+    border: 1px solid rgba(239, 68, 68, 0.1);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    margin-top: 2rem;
+}
+
+.critique-point {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(239, 68, 68, 0.1);
+}
+
+.critique-point:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.critique-point h3 {
+    color: #ef4444;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+/* Conclusion Section */
+.conclusion-section {
+    background: rgba(104, 211, 145, 0.05);
+    border: 1px solid rgba(104, 211, 145, 0.1);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+}
+
+.final-verdict {
+    background: var(--card-bg);
+    border: 2px solid var(--accent-green);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    margin-top: 2rem;
+}
+
+.final-verdict h3 {
+    color: var(--accent-green);
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.final-verdict p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+}
+
+/* Related Books */
+.related-books {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--border-color);
+}
+
+.related-books h2 {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.related-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.related-link {
+    background: var(--card-bg);
+    color: var(--accent-blue);
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.related-link:hover {
+    background: rgba(99, 179, 237, 0.1);
+    border-color: var(--accent-blue);
+    transform: translateY(-2px);
+}
+
+/* Responsive Review Page */
+@media (max-width: 768px) {
+    .review-main {
+        padding: 1.5rem 1rem;
+    }
+    
+    .review-meta {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .rating-display {
+        align-self: center;
+    }
+    
+    .review-title-section h1 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    
+    .book-meta-line {
+        text-align: center;
+    }
+    
+    .review-tags {
+        justify-content: center;
+    }
+    
+    .review-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .book-cover-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .review-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .related-links {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .review-title-section h1 {
+        font-size: 1.5rem;
+    }
+    
+    .book-cover-section {
+        margin-bottom: 2rem;
+    }
+    
+    .review-section {
+        margin-bottom: 2rem;
+    }
+    }
+
 /* ====== SCROLL TO TOP BUTTON ====== */
 #scrollToTopBtn {
     display: none;
