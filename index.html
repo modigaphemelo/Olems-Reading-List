@@ -14,7 +14,7 @@
     <!-- Header -->
     <header>
         <h1>Olem's Reading List</h1>
-        <p>Showcasing books I've read.</p>
+        <p>Showcasing books I've read with reviews and analysis.</p>
         <div class="header-decoration"></div>
         <button class="openbtn" onclick="openNav()" aria-label="Open navigation menu">☰ Menu</button>
     </header>
@@ -64,11 +64,11 @@
             </div>
             
             <div class="book-grid">
-                <article class="book-card">
-                    <div class="current-badge">Currently Reading</div>
+                <a href="reviews/computer-science/just-for-fun.html" class="book-card">
+                    <div class="current-badge">Reading</div>
                     <div class="rating-badge rating-tbd">-</div>
                     
-                    <img src="img/computer-science/just-for-fun.jpg" alt="Just For Fun Cover" loading="lazy">
+                    <img src="img/computer-science/just-for-fun.jpg" alt="Just For Fun by Linus Torvalds" loading="lazy">
                     
                     <div class="book-title">
                         <h3>Just For Fun</h3>
@@ -76,21 +76,16 @@
                     </div>
                     
                     <div class="book-meta">
-                        <span class="date-started">📅 Started: March 2025</span>
-                        <span class="book-pages">📖 288 pages</span>
+                        <span class="date-started">Started: 25 January 2026</span>
+                        <span class="book-pages">288 pages</span>
                     </div>
                     
-                    <footer class="book-card-footer">Open Source • Memoir • Tech</footer>
-                    
-                    <a href="reviews/just-for-fun.html" class="review-link">
-                        Read Review & Analysis →
-                    </a>
-                    
-                    <div class="overview">
-                        <h3>Overview</h3>
-                        <p>The story of Linus Torvalds and the creation of Linux. A memoir about passion, open source, and accidentally changing the world.</p>
+                    <div class="book-tags">
+                        <span class="book-tag">Open Source</span>
+                        <span class="book-tag">Memoir</span>
+                        <span class="book-tag">Tech</span>
                     </div>
-                </article>
+                </a>
             </div>
         </section>
 
@@ -102,61 +97,49 @@
             </div>
             
             <div class="book-grid">
-                <!-- Example featured book 1 -->
-                <article class="book-card">
+                <a href="reviews/finance/psychology-of-money.html" class="book-card">
                     <div class="rating-badge rating-9">9</div>
                     
-                    <img src="img/psychology/psychology-of-money.jpg" alt="The Psychology of Money Cover" loading="lazy">
+                    <img src="img/finance/psychology-of-money.jpg" alt="The Psychology of Money" loading="lazy">
                     
                     <div class="book-title">
                         <h3>The Psychology of Money</h3>
-                        <p class="book-subtitle">Timeless lessons on wealth, greed, and happiness</p>
+                        <p class="book-subtitle">Morgan Housel</p>
                     </div>
                     
                     <div class="book-meta">
-                        <span class="date-finished">📅 Finished: Jan 2024</span>
-                        <span class="book-pages">📖 256 pages</span>
+                        <span class="date-finished">Finished: Jan 2024</span>
+                        <span class="book-pages">256 pages</span>
                     </div>
                     
-                    <footer class="book-card-footer">Finance • Psychology • Insights</footer>
-                    
-                    <a href="reviews/psychology/psychology-of-money.html" class="review-link">
-                        Read Review →
-                    </a>
-                    
-                    <div class="overview">
-                        <h3>Overview</h3>
-                        <p>Morgan Housel explores how people think about money and how their behavior affects their financial outcomes.</p>
+                    <div class="book-tags">
+                        <span class="book-tag">Finance</span>
+                        <span class="book-tag">Psychology</span>
+                        <span class="book-tag">Insights</span>
                     </div>
-                </article>
+                </a>
                 
-                <!-- Example featured book 2 -->
-                <article class="book-card">
+                <a href="reviews/addiction/dopamine-nation.html" class="book-card">
                     <div class="rating-badge rating-8">8</div>
                     
-                    <img src="img/addiction/dopamine-nation.jpg" alt="Dopamine Nation Cover" loading="lazy">
-                    
+                    <img src="img/addiction/dopamine-nation.jpg" alt="Dopamine Nation" loading="lazy">
+                    a
                     <div class="book-title">
                         <h3>Dopamine Nation</h3>
-                        <p class="book-subtitle">Finding Balance in the Age of Indulgence</p>
+                        <p class="book-subtitle">Anna Lembke</p>
                     </div>
                     
                     <div class="book-meta">
-                        <span class="date-finished">📅 Finished: Dec 2023</span>
-                        <span class="book-pages">📖 304 pages</span>
+                        <span class="date-finished">Finished: Dec 2023</span>
+                        <span class="book-pages">304 pages</span>
                     </div>
                     
-                    <footer class="book-card-footer">Neuroscience • Addiction • Wellness</footer>
-                    
-                    <a href="reviews/addiction/dopamine-nation.html" class="review-link">
-                        Read Review →
-                    </a>
-                    
-                    <div class="overview">
-                        <h3>Overview</h3>
-                        <p>Anna Lembke examines the neuroscience of pleasure and pain, and how modern society has become addicted to dopamine.</p>
+                    <div class="book-tags">
+                        <span class="book-tag">Neuroscience</span>
+                        <span class="book-tag">Addiction</span>
+                        <span class="book-tag">Wellness</span>
                     </div>
-                </article>
+                </a>
             </div>
         </section>
 
@@ -198,7 +181,7 @@
     <!-- Footer -->
     <footer>
         <div class="footer-decoration"></div>
-        <p>&copy; 2025 Olem's Reading List. All rights reserved.</p>
+        <p>&copy; <span id="current-year">2025</span> Olem's Reading List. All rights reserved.</p>
         <p class="footer-quote">"The more that you read, the more things you will know. The more that you learn, the more places you'll go." — Dr. Seuss</p>
     </footer>
 
@@ -211,4 +194,4 @@
 
     <script src="js/app.js"></script>
 </body>
- </html>
+</html>
