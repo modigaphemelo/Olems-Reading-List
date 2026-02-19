@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Olem's Reading List</title>
+    <title>Olem's Reading List · 2026 →</title>
     <link rel="stylesheet" href="css/style.css">
-    <meta name="description" content="A curated collection of books I've read, with reviews and analysis.">
+    <meta name="description" content="A curated collection of books read from 2026 onward – explore genres, analyses and notes.">
     <link rel="icon" href="olem.png" sizes="any">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -14,12 +14,12 @@
     <!-- Header -->
     <header>
         <h1>Olem's Reading List</h1>
-        <p>Showcasing books I've read with reviews and analysis.</p>
+        <p>Books read from 2026 · reviews & analysis</p>
         <div class="header-decoration"></div>
         <button class="openbtn" onclick="openNav()" aria-label="Open navigation menu">☰ Menu</button>
     </header>
 
-    <!-- Sidebar -->
+    <!-- Sidebar (same structure, updated categories) -->
     <nav id="mySidenav" class="sidenav">
         <button class="closebtn" onclick="closeNav()" aria-label="Close navigation menu">&times;</button>
         <ul>
@@ -51,129 +51,138 @@
 
     <!-- Main Content -->
     <main>
+        <!-- Intro section updated: 2026 onward, no currently reading -->
         <section class="intro-section">
-            <h2>Welcome to My Reading Journey</h2>
-            <p>This is a collection of books I've read, complete with ratings, dates read, and detailed reviews. Each book is analyzed for its insights, impact, and practical value.</p>
+            <h2>📅 Starting 2026, fresh shelf</h2>
+            <p>All books listed were read from January 2026 onward. No backlog, no nostalgia — only what I discover from this point. Use the category cards below to explore notes, ratings and highlights.</p>
         </section>
 
-        <!-- Currently Reading -->
+        <!-- Category EXPLORATION GRID (no book entries, just genre cards) -->
         <section class="book-section">
             <div class="section-header">
-                <h2>📖 Currently Reading</h2>
-                <p>What's on my reading desk right now</p>
+                <h2>📂 browse by genre</h2>
+                <p>short descriptions & links to each reading page</p>
             </div>
             
-            <div class="book-grid">
-                <a href="reviews/computer-science/just-for-fun.html" class="book-card">
-                    <div class="current-badge">Reading</div>
-                    <div class="rating-badge rating-tbd">-</div>
-                    
-                    <img src="img/computer-science/just-for-fun.jpg" alt="Just For Fun by Linus Torvalds" loading="lazy">
-                    
-                    <div class="book-title">
-                        <h3>Just For Fun</h3>
-                        <p class="book-subtitle">The Story of an Accidental Revolutionary</p>
-                    </div>
-                    
-                    <div class="book-meta">
-                        <span class="date-started">Started: 25 January 2026</span>
-                        <span class="book-pages">288 pages</span>
-                    </div>
-                    
-                    <div class="book-tags">
-                        <span class="book-tag">Open Source</span>
-                        <span class="book-tag">Memoir</span>
-                        <span class="book-tag">Tech</span>
-                    </div>
-                </a>
-            </div>
-        </section>
-
-        <!-- Featured Books -->
-        <section class="book-section">
-            <div class="section-header">
-                <h2>⭐ Featured Books</h2>
-                <p>Notable reads worth checking out</p>
-            </div>
-            
-            <div class="book-grid">
-                <a href="reviews/finance/psychology-of-money.html" class="book-card">
-                    <div class="rating-badge rating-9">9</div>
-                    
-                    <img src="img/finance/psychology-of-money.jpg" alt="The Psychology of Money" loading="lazy">
-                    
-                    <div class="book-title">
-                        <h3>The Psychology of Money</h3>
-                        <p class="book-subtitle">Morgan Housel</p>
-                    </div>
-                    
-                    <div class="book-meta">
-                        <span class="date-finished">Finished: Jan 2024</span>
-                        <span class="book-pages">256 pages</span>
-                    </div>
-                    
-                    <div class="book-tags">
-                        <span class="book-tag">Finance</span>
-                        <span class="book-tag">Psychology</span>
-                        <span class="book-tag">Insights</span>
-                    </div>
+            <!-- genre cards – arranged as description cards, no book covers / ratings -->
+            <div class="category-grid">
+                <!-- each card links to the respective genre page, contains short description -->
+                <a href="pages/biographies-memoirs.html" class="genre-card">
+                    <span class="genre-icon">👤</span>
+                    <h3>Biographies & Memoirs</h3>
+                    <p>Lives, lessons, and personal journeys — from innovators to unsung voices.</p>
                 </a>
                 
-                <a href="reviews/addiction/dopamine-nation.html" class="book-card">
-                    <div class="rating-badge rating-8">8</div>
-                    
-                    <img src="img/addiction/dopamine-nation.jpg" alt="Dopamine Nation" loading="lazy">
-                    a
-                    <div class="book-title">
-                        <h3>Dopamine Nation</h3>
-                        <p class="book-subtitle">Anna Lembke</p>
-                    </div>
-                    
-                    <div class="book-meta">
-                        <span class="date-finished">Finished: Dec 2023</span>
-                        <span class="book-pages">304 pages</span>
-                    </div>
-                    
-                    <div class="book-tags">
-                        <span class="book-tag">Neuroscience</span>
-                        <span class="book-tag">Addiction</span>
-                        <span class="book-tag">Wellness</span>
-                    </div>
+                <a href="pages/business-economics.html" class="genre-card">
+                    <span class="genre-icon">📈</span>
+                    <h3>Business & Economics</h3>
+                    <p>Markets, strategy, organisational behaviour and economic thinking.</p>
                 </a>
-            </div>
-        </section>
-
-        <!-- Category Quick Links -->
-        <section class="book-section">
-            <div class="section-header">
-                <h2>📂 Browse Categories</h2>
-                <p>Explore books by topic</p>
-            </div>
-            
-            <div class="category-links">
-                <a href="pages/computer-science.html" class="category-link">
-                    <span class="category-icon">💻</span>
+                
+                <a href="pages/computer-science.html" class="genre-card">
+                    <span class="genre-icon">💻</span>
                     <h3>Computer Science</h3>
-                    <p>Algorithms, systems, theory</p>
+                    <p>Systems, theory, computing paradigms and tech culture.</p>
                 </a>
                 
-                <a href="pages/philosophy.html" class="category-link">
-                    <span class="category-icon">🤔</span>
-                    <h3>Philosophy</h3>
-                    <p>Critical thinking, ethics, logic</p>
+                <a href="pages/data-structures-algorithms.html" class="genre-card">
+                    <span class="genre-icon">📊</span>
+                    <h3>Data Structures & Algorithms</h3>
+                    <p>Foundations of efficient problem solving and code.</p>
                 </a>
                 
-                <a href="pages/finance-wealth.html" class="category-link">
-                    <span class="category-icon">💰</span>
+                <a href="pages/finance-wealth.html" class="genre-card">
+                    <span class="genre-icon">💰</span>
                     <h3>Finance & Wealth</h3>
-                    <p>Investing, money management</p>
+                    <p>Investing, financial independence, and money mindset.</p>
                 </a>
                 
-                <a href="pages/fiction-literature.html" class="category-link">
-                    <span class="category-icon">📖</span>
-                    <h3>Fiction & Literature</h3>
-                    <p>Novels, short stories, classics</p>
+                <a href="pages/history-politics.html" class="genre-card">
+                    <span class="genre-icon">📜</span>
+                    <h3>History & Politics</h3>
+                    <p>Events, power structures, and the stories that shaped us.</p>
                 </a>
+                
+                <a href="pages/mathematics.html" class="genre-card">
+                    <span class="genre-icon">🔢</span>
+                    <h3>Mathematics</h3>
+                    <p>Elegant proofs, mathematical thinking, and numerical worlds.</p>
+                </a>
+                
+                <a href="pages/personal-development.html" class="genre-card">
+                    <span class="genre-icon">🧠</span>
+                    <h3>Personal Development</h3>
+                    <p>Habits, productivity, self-awareness and growth.</p>
+                </a>
+                
+                <a href="pages/philosophy.html" class="genre-card">
+                    <span class="genre-icon">🤔</span>
+                    <h3>Philosophy</h3>
+                    <p>Ethics, logic, existential questions and critical thought.</p>
+                </a>
+                
+                <a href="pages/physical-exercise-health.html" class="genre-card">
+                    <span class="genre-icon">💪</span>
+                    <h3>Physical Exercise & Health</h3>
+                    <p>Movement, physiology, nutrition and well-being.</p>
+                </a>
+                
+                <a href="pages/programming.html" class="genre-card">
+                    <span class="genre-icon">⚙️</span>
+                    <h3>Programming</h3>
+                    <p>Languages, craftsmanship, software design and clean code.</p>
+                </a>
+                
+                <a href="pages/psychology-sociology.html" class="genre-card">
+                    <span class="genre-icon">🧪</span>
+                    <h3>Psychology & Sociology</h3>
+                    <p>Mind, behaviour, groups and social dynamics.</p>
+                </a>
+                
+                <a href="pages/science-technology.html" class="genre-card">
+                    <span class="genre-icon">🔬</span>
+                    <h3>Science & Technology</h3>
+                    <p>Discoveries, innovation, and the nature of knowledge.</p>
+                </a>
+                
+                <!-- FICTION GENRES -->
+                <a href="pages/fiction-literature.html" class="genre-card">
+                    <span class="genre-icon">📖</span>
+                    <h3>Fiction & Literature</h3>
+                    <p>Contemporary novels, literary fiction and short stories.</p>
+                </a>
+                
+                <a href="pages/fiction-science-fiction.html" class="genre-card">
+                    <span class="genre-icon">🚀</span>
+                    <h3>Science Fiction</h3>
+                    <p>Futures, aliens, tech speculation and dystopias.</p>
+                </a>
+                
+                <a href="pages/fiction-fantasy.html" class="genre-card">
+                    <span class="genre-icon">🧙</span>
+                    <h3>Fantasy</h3>
+                    <p>Magic, worldbuilding, epics and mythical creatures.</p>
+                </a>
+                
+                <a href="pages/fiction-mystery-thriller.html" class="genre-card">
+                    <span class="genre-icon">🔍</span>
+                    <h3>Mystery & Thriller</h3>
+                    <p>Suspense, crime, puzzles and psychological tension.</p>
+                </a>
+                
+                <a href="pages/fiction-classics.html" class="genre-card">
+                    <span class="genre-icon">🏛️</span>
+                    <h3>Classics</h3>
+                    <p>Enduring works, timeless prose and literary heritage.</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- short note about 2026+ focus -->
+        <section class="note-section">
+            <div class="year-note">
+                <span class="note-icon">⏳</span>
+                <p><strong>Reading year starts 2026</strong> — every book you see across these pages was read after Jan 1, 2026. No older entries, pure forward momentum.</p>
             </div>
         </section>
     </main>
@@ -181,7 +190,7 @@
     <!-- Footer -->
     <footer>
         <div class="footer-decoration"></div>
-        <p>&copy; <span id="current-year">2025</span> Olem's Reading List. All rights reserved.</p>
+        <p>&copy; <span id="current-year">2026</span> Olem's Reading List. All rights reserved.</p>
         <p class="footer-quote">"The more that you read, the more things you will know. The more that you learn, the more places you'll go." — Dr. Seuss</p>
     </footer>
 
@@ -194,4 +203,4 @@
 
     <script src="js/app.js"></script>
 </body>
-</html>
+    </html>
