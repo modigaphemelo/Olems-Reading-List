@@ -8,8 +8,146 @@
     <meta name="description" content="Lives, lessons, and personal journeys — from innovators to unsung voices.">
     <link rel="icon" href="../olem.png" sizes="any">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .category-grid, .book-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.25rem;
+            margin-top: 1rem;
+        }
+        
+        .book-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 1.5rem 1rem 1rem;
+            text-decoration: none;
+            color: var(--text-primary);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: all 0.2s ease;
+            position: relative;
+            min-height: 320px;
+        }
+        
+        .book-card:hover {
+            border-color: var(--accent-blue);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        .rating-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: white;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+            border: 2px solid var(--card-bg);
+            z-index: 2;
+        }
+        
+        .book-card img {
+            width: 140px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 0.5rem 0 1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        }
+        
+        .book-title h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            color: var(--text-primary);
+        }
+        
+        .book-subtitle {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+        
+        .book-meta {
+            margin: 0.5rem 0;
+        }
+        
+        .book-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-top: 0.5rem;
+        }
+        
+        .book-tag {
+            background: rgba(99, 179, 237, 0.1);
+            color: var(--accent-blue);
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            border: 1px solid rgba(99, 179, 237, 0.2);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .section-header h2 {
+            font-size: 1.5rem;
+            color: var(--accent-blue);
+            margin-bottom: 0.25rem;
+        }
+        
+        .section-header p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+        
+        .intro-section {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            padding: 1.5rem;
+        }
+        
+        .intro-section h2 {
+            font-size: 2rem;
+            color: var(--accent-blue);
+            margin-bottom: 1rem;
+        }
+        
+        .category-stats {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .stat-badge {
+            background: rgba(99, 179, 237, 0.15);
+            color: var(--accent-blue);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid rgba(99, 179, 237, 0.3);
+        }
+    </style>
 </head>
-
 <body>
     <header>
         <h1>Olem's Reading List</h1>
@@ -22,7 +160,6 @@
         <button class="closebtn" onclick="closeNav()" aria-label="Close navigation menu">&times;</button>
         <ul>
             <li><a href="../index.html">🏠 Home</a></li>
-            
             <li class="category-title">📚 Nonfiction</li>
             <li><a href="biographies-memoirs.html" aria-current="page">👤 Biographies & Memoirs</a></li>
             <li><a href="business-economics.html">📈 Business & Economics</a></li>
@@ -37,7 +174,6 @@
             <li><a href="programming.html">⚙️ Programming</a></li>
             <li><a href="psychology-sociology.html">🧪 Psychology & Sociology</a></li>
             <li><a href="science-technology.html">🔬 Science & Technology</a></li>
-            
             <li class="category-title">📖 Fiction</li>
             <li><a href="fiction-literature.html">📖 Fiction & Literature</a></li>
             <li><a href="fiction-science-fiction.html">🚀 Science Fiction</a></li>
@@ -54,11 +190,9 @@
             <div class="category-stats">
                 <span class="stat-badge">📚 8 Books</span>
                 <span class="stat-badge">⭐ Avg Rating: 7.9</span>
-                <span class="stat-badge">📖 2,874 Pages</span>
             </div>
         </section>
 
-        <!-- Tech & Innovation -->
         <section class="book-section">
             <div class="section-header">
                 <h2>💻 Tech & Innovation</h2>
@@ -66,21 +200,13 @@
             </div>
             
             <div class="book-grid">
-                <!-- Just For Fun - moved from computer science -->
                 <a href="../reviews/biographies-memoirs/just-for-fun.html" class="book-card">
                     <div class="rating-badge rating-8">8</div>
-                    
                     <img src="../img/biographies-memoirs/just-for-fun.jpg" alt="Just For Fun by Linus Torvalds" loading="lazy">
-                    
                     <div class="book-title">
                         <h3>Just For Fun</h3>
-                        <p class="book-subtitle">The Story of an Accidental Revolutionary</p>
+                        <p class="book-subtitle">Linus Torvalds</p>
                     </div>
-                    
-                    <div class="book-meta">
-                        <span class="book-pages">288 pages</span>
-                    </div>
-                    
                     <div class="book-tags">
                         <span class="book-tag">Open Source</span>
                         <span class="book-tag">Linux</span>
@@ -88,21 +214,13 @@
                     </div>
                 </a>
 
-                <!-- My Life and Work -->
                 <a href="../reviews/biographies-memoirs/my-life-and-work.html" class="book-card">
                     <div class="rating-badge rating-7">7</div>
-                    
                     <img src="../img/biographies-memoirs/my-life-and-work.jpg" alt="My Life and Work by Henry Ford" loading="lazy">
-                    
                     <div class="book-title">
                         <h3>My Life and Work</h3>
                         <p class="book-subtitle">Henry Ford</p>
                     </div>
-                    
-                    <div class="book-meta">
-                        <span class="book-pages">304 pages</span>
-                    </div>
-                    
                     <div class="book-tags">
                         <span class="book-tag">Industry</span>
                         <span class="book-tag">Innovation</span>
@@ -112,7 +230,6 @@
             </div>
         </section>
 
-        <!-- Mathematics & Genius -->
         <section class="book-section">
             <div class="section-header">
                 <h2>🔢 Mathematics & Genius</h2>
@@ -120,21 +237,13 @@
             </div>
             
             <div class="book-grid">
-                <!-- The Man Who Loved Only Numbers -->
                 <a href="../reviews/biographies-memoirs/man-who-loved-only-numbers.html" class="book-card">
                     <div class="rating-badge rating-8">8</div>
-                    
                     <img src="../img/biographies-memoirs/man-who-loved-only-numbers.jpg" alt="The Man Who Loved Only Numbers by Paul Hoffman" loading="lazy">
-                    
                     <div class="book-title">
                         <h3>The Man Who Loved Only Numbers</h3>
                         <p class="book-subtitle">Paul Hoffman</p>
                     </div>
-                    
-                    <div class="book-meta">
-                        <span class="book-pages">304 pages</span>
-                    </div>
-                    
                     <div class="book-tags">
                         <span class="book-tag">Paul Erdős</span>
                         <span class="book-tag">Mathematics</span>
@@ -142,21 +251,13 @@
                     </div>
                 </a>
 
-                <!-- A Beautiful Mind -->
                 <a href="../reviews/biographies-memoirs/beautiful-mind.html" class="book-card">
                     <div class="rating-badge rating-8">8</div>
-                    
                     <img src="../img/biographies-memoirs/beautiful-mind.jpg" alt="A Beautiful Mind by Sylvia Nasar" loading="lazy">
-                    
                     <div class="book-title">
                         <h3>A Beautiful Mind</h3>
                         <p class="book-subtitle">Sylvia Nasar</p>
                     </div>
-                    
-                    <div class="book-meta">
-                        <span class="book-pages">464 pages</span>
-                    </div>
-                    
                     <div class="book-tags">
                         <span class="book-tag">John Nash</span>
                         <span class="book-tag">Mathematics</span>
@@ -166,7 +267,6 @@
             </div>
         </section>
 
-        <!-- Crime & Cunning -->
         <section class="book-section">
             <div class="section-header">
                 <h2>🕵️ Crime & Cunning</h2>
@@ -174,21 +274,13 @@
             </div>
             
             <div class="book-grid">
-                <!-- Kingpin -->
                 <a href="../reviews/biographies-memoirs/kingpin.html" class="book-card">
                     <div class="rating-badge rating-9">9</div>
-                    
                     <img src="../img/biographies-memoirs/kingpin.jpg" alt="Kingpin by Kevin Poulsen" loading="lazy">
-                    
                     <div class="book-title">
                         <h3>Kingpin</h3>
                         <p class="book-subtitle">Kevin Poulsen</p>
                     </div>
-                    
-                    <div class="book-meta">
-                        <span class="book-pages">288 pages</span>
-                    </div>
-                    
                     <div class="book-tags">
                         <span class="book-tag">Hacking</span>
                         <span class="book-tag">Cybercrime</span>
@@ -196,21 +288,13 @@
                     </div>
                 </a>
 
-                <!-- Catch Me If You Can -->
                 <a href="../reviews/biographies-memoirs/catch-me-if-you-can.html" class="book-card">
                     <div class="rating-badge rating-8">8</div>
-                    
                     <img src="../img/biographies-memoirs/catch-me-if-you-can.jpg" alt="Catch Me If You Can by Frank Abagnale" loading="lazy">
-                    
                     <div class="book-title">
                         <h3>Catch Me If You Can</h3>
                         <p class="book-subtitle">Frank Abagnale</p>
                     </div>
-                    
-                    <div class="book-meta">
-                        <span class="book-pages">288 pages</span>
-                    </div>
-                    
                     <div class="book-tags">
                         <span class="book-tag">Con Artist</span>
                         <span class="book-tag">True Crime</span>
@@ -220,7 +304,6 @@
             </div>
         </section>
 
-        <!-- Resilience & Mastery -->
         <section class="book-section">
             <div class="section-header">
                 <h2>💪 Resilience & Mastery</h2>
@@ -228,21 +311,13 @@
             </div>
             
             <div class="book-grid">
-                <!-- Can't Hurt Me -->
                 <a href="../reviews/biographies-memoirs/cant-hurt-me.html" class="book-card">
                     <div class="rating-badge rating-9">9</div>
-                    
                     <img src="../img/biographies-memoirs/cant-hurt-me.jpg" alt="Can't Hurt Me by David Goggins" loading="lazy">
-                    
                     <div class="book-title">
                         <h3>Can't Hurt Me</h3>
                         <p class="book-subtitle">David Goggins</p>
                     </div>
-                    
-                    <div class="book-meta">
-                        <span class="book-pages">384 pages</span>
-                    </div>
-                    
                     <div class="book-tags">
                         <span class="book-tag">Mental Toughness</span>
                         <span class="book-tag">Navy SEAL</span>
@@ -250,21 +325,13 @@
                     </div>
                 </a>
 
-                <!-- The Art of Learning -->
                 <a href="../reviews/biographies-memoirs/art-of-learning.html" class="book-card">
                     <div class="rating-badge rating-8">8</div>
-                    
                     <img src="../img/biographies-memoirs/art-of-learning.jpg" alt="The Art of Learning by Josh Waitzkin" loading="lazy">
-                    
                     <div class="book-title">
                         <h3>The Art of Learning</h3>
                         <p class="book-subtitle">Josh Waitzkin</p>
                     </div>
-                    
-                    <div class="book-meta">
-                        <span class="book-pages">288 pages</span>
-                    </div>
-                    
                     <div class="book-tags">
                         <span class="book-tag">Chess</span>
                         <span class="book-tag">Martial Arts</span>
@@ -278,7 +345,7 @@
     <footer>
         <div class="footer-decoration"></div>
         <p>&copy; <span id="current-year">2026</span> Olem's Reading List. All rights reserved.</p>
-        <p class="footer-quote">"The lives of great men are like fables — they remind us that the extraordinary is possible."</p>
+        <p class="footer-quote">"The more that you read, the more things you will know. The more that you learn, the more places you'll go." — Dr. Seuss</p>
     </footer>
 
     <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">
