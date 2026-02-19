@@ -200,6 +200,7 @@ main {
 }
 
 .section-header {
+    text-align: center;
     margin-bottom: 1.5rem;
 }
 
@@ -244,21 +245,6 @@ main {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
-.current-badge {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background: var(--accent-green);
-    color: white;
-    padding: 0.25rem 0.5rem;
-    border-radius: 4px;
-    font-size: 0.7rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    z-index: 2;
-}
-
 .book-card img {
     width: 100%;
     height: 220px;
@@ -270,6 +256,7 @@ main {
 .book-title {
     padding: 1rem;
     flex-grow: 1;
+    text-align: center;
 }
 
 .book-title h3 {
@@ -291,7 +278,7 @@ main {
     font-size: 0.8rem;
     color: var(--text-muted);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 0.75rem;
 }
 
@@ -300,6 +287,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
+    justify-content: center;
 }
 
 .book-tag {
@@ -381,22 +369,6 @@ main {
     line-height: 1.6;
 }
 
-/* RESPONSIVE CATEGORY PAGE */
-@media (max-width: 768px) {
-    .intro-section h2 {
-        font-size: 1.75rem;
-    }
-    
-    .stat-badge {
-        font-size: 0.8rem;
-        padding: 0.4rem 0.8rem;
-    }
-    
-    .insights-grid {
-        grid-template-columns: 1fr;
-    }
-    }
-
 /* RATING BADGES */
 .rating-badge {
     position: absolute;
@@ -428,18 +400,19 @@ main {
 .rating-2 { background: #f87171; }
 .rating-1 { background: #dc2626; }
 
-/* CATEGORY LINKS */
-.category-links {
+/* CATEGORY GRID (for homepage) */
+.category-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1rem;
 }
 
-.category-link {
+.genre-card {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
-    padding: 1rem;
+    padding: 1.5rem 1rem;
     text-decoration: none;
     color: var(--text-primary);
     display: flex;
@@ -449,25 +422,48 @@ main {
     transition: all 0.2s ease;
 }
 
-.category-link:hover {
+.genre-card:hover {
     border-color: var(--accent-blue);
-    transform: translateY(-2px);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
-.category-icon {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+.genre-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+    line-height: 1;
 }
 
-.category-link h3 {
-    font-size: 1rem;
-    font-weight: 500;
-    margin-bottom: 0.25rem;
+.genre-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    color: var(--text-primary);
 }
 
-.category-link p {
-    font-size: 0.85rem;
+.genre-card p {
+    font-size: 0.9rem;
     color: var(--text-muted);
+    margin: 0;
+    line-height: 1.5;
+    max-width: 220px;
+}
+
+/* YEAR NOTE */
+.year-note {
+    background: rgba(99, 179, 237, 0.05);
+    border: 1px dashed var(--border-color);
+    padding: 1rem 2rem;
+    border-radius: 40px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 0 auto;
+}
+
+.note-section {
+    margin-top: 2.5rem;
+    text-align: center;
 }
 
 /* REVIEW PAGE STYLES */
@@ -852,7 +848,7 @@ footer p {
         height: 180px;
     }
     
-    .category-links {
+    .category-grid {
         grid-template-columns: 1fr;
     }
     
