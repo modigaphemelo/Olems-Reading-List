@@ -3,28 +3,24 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Olem's Reading List</title>
+    <title>Olem's Reading List · 2026 →</title>
     <link rel="stylesheet" href="css/style.css">
-    <meta name="description" content="A curated collection of books read from 2026 onward – explore genres, analyses and notes.">
+    <meta name="description" content="Books read from 2026 onward – explore genres, notes and analysis.">
     <link rel="icon" href="olem.png" sizes="any">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <!-- Header -->
     <header>
         <h1>Olem's Reading List</h1>
-        <p>Books read from 2026</p>
+        <p>Books read from 2026 · reviews & analysis</p>
         <div class="header-decoration"></div>
         <button class="openbtn" onclick="openNav()" aria-label="Open navigation menu">☰ Menu</button>
     </header>
 
-    <!-- Sidebar (same structure, updated categories) -->
     <nav id="mySidenav" class="sidenav">
         <button class="closebtn" onclick="closeNav()" aria-label="Close navigation menu">&times;</button>
         <ul>
             <li><a href="index.html" aria-current="page">🏠 Home</a></li>
-            
             <li class="category-title">📚 Nonfiction</li>
             <li><a href="pages/biographies-memoirs.html">👤 Biographies & Memoirs</a></li>
             <li><a href="pages/business-economics.html">📈 Business & Economics</a></li>
@@ -39,7 +35,6 @@
             <li><a href="pages/programming.html">⚙️ Programming</a></li>
             <li><a href="pages/psychology-sociology.html">🧪 Psychology & Sociology</a></li>
             <li><a href="pages/science-technology.html">🔬 Science & Technology</a></li>
-            
             <li class="category-title">📖 Fiction</li>
             <li><a href="pages/fiction-literature.html">📖 Fiction & Literature</a></li>
             <li><a href="pages/fiction-science-fiction.html">🚀 Science Fiction</a></li>
@@ -49,152 +44,116 @@
         </ul>
     </nav>
 
-    <!-- Main Content -->
     <main>
-        <!-- Intro section updated: 2026 onward, no currently reading -->
         <section class="intro-section">
-            <h2>📅 Starting 2026, fresh shelf</h2>
-            <p>All books listed were read from January 2026 onward. No backlog, no nostalgia — only what I discover from this point. Use the category cards below to explore notes, ratings and highlights.</p>
+            <h2>Starting 2026, fresh shelf</h2>
+            <p>Every book listed was read from January 2026 onward. No backlog, only forward Backl.</p>
         </section>
 
-        <!-- Category EXPLORATION GRID (no book entries, just genre cards) -->
-        <section class="book-section">
-            <div class="section-header">
-                <h2>📂 browse by genre</h2>
-                <p>short descriptions & links to each reading page</p>
-            </div>
-            
-            <!-- genre cards – arranged as description cards, no book covers / ratings -->
-            <div class="category-grid">
-                <!-- each card links to the respective genre page, contains short description -->
-                <a href="pages/biographies-memoirs.html" class="genre-card">
-                    <span class="genre-icon">👤</span>
-                    <h3>Biographies & Memoirs</h3>
-                    <p>Lives, lessons, and personal journeys — from innovators to unsung voices.</p>
+        <section class="book-section">             
+            <div class="category-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; margin-top: 1rem;">
+                <!-- nonfiction -->
+                <a href="pages/biographies-memoirs.html" class="genre-card" style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--border-radius); padding: 1.25rem; text-decoration: none; color: var(--text-primary); display: flex; flex-direction: column; transition: all 0.2s ease;">
+                    <span style="font-size: 2rem; margin-bottom: 0.5rem;">👤</span>
+                    <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.3rem;">Biographies & Memoirs</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">Lives, lessons, and personal journeys — from innovators to unsung voices.</p>
                 </a>
-                
-                <a href="pages/business-economics.html" class="genre-card">
-                    <span class="genre-icon">📈</span>
-                    <h3>Business & Economics</h3>
-                    <p>Markets, strategy, organisational behaviour and economic thinking.</p>
+                <a href="pages/business-economics.html" class="genre-card" style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--border-radius); padding: 1.25rem; text-decoration: none; color: var(--text-primary); display: flex; flex-direction: column;">
+                    <span style="font-size: 2rem; margin-bottom: 0.5rem;">📈</span>
+                    <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.3rem;">Business & Economics</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">Markets, strategy, organisational behaviour and economic thinking.</p>
                 </a>
-                
-                <a href="pages/computer-science.html" class="genre-card">
-                    <span class="genre-icon">💻</span>
-                    <h3>Computer Science</h3>
-                    <p>Systems, theory, computing paradigms and tech culture.</p>
+                <a href="pages/computer-science.html" class="genre-card" style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--border-radius); padding: 1.25rem; text-decoration: none; color: var(--text-primary); display: flex; flex-direction: column;">
+                    <span style="font-size: 2rem; margin-bottom: 0.5rem;">💻</span>
+                    <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.3rem;">Computer Science</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">Systems, theory, computing paradigms and tech culture.</p>
                 </a>
-                
-                <a href="pages/data-structures-algorithms.html" class="genre-card">
-                    <span class="genre-icon">📊</span>
-                    <h3>Data Structures & Algorithms</h3>
-                    <p>Foundations of efficient problem solving and code.</p>
+                <a href="pages/data-structures-algorithms.html" class="genre-card" style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--border-radius); padding: 1.25rem; text-decoration: none; color: var(--text-primary); display: flex; flex-direction: column;">
+                    <span style="font-size: 2rem; margin-bottom: 0.5rem;">📊</span>
+                    <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.3rem;">Data Structures & Algorithms</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">Foundations of efficient problem solving and code.</p>
                 </a>
-                
-                <a href="pages/finance-wealth.html" class="genre-card">
-                    <span class="genre-icon">💰</span>
-                    <h3>Finance & Wealth</h3>
-                    <p>Investing, financial independence, and money mindset.</p>
+                <a href="pages/finance-wealth.html" class="genre-card" style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--border-radius); padding: 1.25rem; text-decoration: none; color: var(--text-primary); display: flex; flex-direction: column;">
+                    <span style="font-size: 2rem; margin-bottom: 0.5rem;">💰</span>
+                    <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.3rem;">Finance & Wealth</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">Investing, financial independence, and money mindset.</p>
                 </a>
-                
-                <a href="pages/history-politics.html" class="genre-card">
-                    <span class="genre-icon">📜</span>
-                    <h3>History & Politics</h3>
-                    <p>Events, power structures, and the stories that shaped us.</p>
+                <a href="pages/history-politics.html" class="genre-card" style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--border-radius); padding: 1.25rem; text-decoration: none; color: var(--text-primary); display: flex; flex-direction: column;">
+                    <span style="font-size: 2rem; margin-bottom: 0.5rem;">📜</span>
+                    <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.3rem;">History & Politics</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">Events, power structures, and the stories that shaped us.</p>
                 </a>
-                
-                <a href="pages/mathematics.html" class="genre-card">
-                    <span class="genre-icon">🔢</span>
-                    <h3>Mathematics</h3>
-                    <p>Elegant proofs, mathematical thinking, and numerical worlds.</p>
+                <a href="pages/mathematics.html" class="genre-card" style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--border-radius); padding: 1.25rem; text-decoration: none; color: var(--text-primary); display: flex; flex-direction: column;">
+                    <span style="font-size: 2rem; margin-bottom: 0.5rem;">🔢</span>
+                    <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.3rem;">Mathematics</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">Elegant proofs, mathematical thinking, and numerical worlds.</p>
                 </a>
-                
-                <a href="pages/personal-development.html" class="genre-card">
-                    <span class="genre-icon">🧠</span>
-                    <h3>Personal Development</h3>
-                    <p>Habits, productivity, self-awareness and growth.</p>
+                <a href="pages/personal-development.html" class="genre-card" style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--border-radius); padding: 1.25rem; text-decoration: none; color: var(--text-primary); display: flex; flex-direction: column;">
+                    <span style="font-size: 2rem; margin-bottom: 0.5rem;">🧠</span>
+                    <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.3rem;">Personal Development</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">Habits, productivity, self-awareness and growth.</p>
                 </a>
-                
-                <a href="pages/philosophy.html" class="genre-card">
-                    <span class="genre-icon">🤔</span>
-                    <h3>Philosophy</h3>
-                    <p>Ethics, logic, existential questions and critical thought.</p>
+                <a href="pages/philosophy.html" class="genre-card" style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--border-radius); padding: 1.25rem; text-decoration: none; color: var(--text-primary); display: flex; flex-direction: column;">
+                    <span style="font-size: 2rem; margin-bottom: 0.5rem;">🤔</span>
+                    <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.3rem;">Philosophy</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">Ethics, logic, existential questions and critical thought.</p>
                 </a>
-                
-                <a href="pages/physical-exercise-health.html" class="genre-card">
-                    <span class="genre-icon">💪</span>
-                    <h3>Physical Exercise & Health</h3>
-                    <p>Movement, physiology, nutrition and well-being.</p>
+                <a href="pages/physical-exercise-health.html" class="genre-card" style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--border-radius); padding: 1.25rem; text-decoration: none; color: var(--text-primary); display: flex; flex-direction: column;">
+                    <span style="font-size: 2rem; margin-bottom: 0.5rem;">💪</span>
+                    <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.3rem;">Physical Exercise & Health</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">Movement, physiology, nutrition and well-being.</p>
                 </a>
-                
-                <a href="pages/programming.html" class="genre-card">
-                    <span class="genre-icon">⚙️</span>
-                    <h3>Programming</h3>
-                    <p>Languages, craftsmanship, software design and clean code.</p>
+                <a href="pages/programming.html" class="genre-card" style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--border-radius); padding: 1.25rem; text-decoration: none; color: var(--text-primary); display: flex; flex-direction: column;">
+                    <span style="font-size: 2rem; margin-bottom: 0.5rem;">⚙️</span>
+                    <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.3rem;">Programming</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">Languages, craftsmanship, software design and clean code.</p>
                 </a>
-                
-                <a href="pages/psychology-sociology.html" class="genre-card">
-                    <span class="genre-icon">🧪</span>
-                    <h3>Psychology & Sociology</h3>
-                    <p>Mind, behaviour, groups and social dynamics.</p>
+                <a href="pages/psychology-sociology.html" class="genre-card" style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--border-radius); padding: 1.25rem; text-decoration: none; color: var(--text-primary); display: flex; flex-direction: column;">
+                    <span style="font-size: 2rem; margin-bottom: 0.5rem;">🧪</span>
+                    <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.3rem;">Psychology & Sociology</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">Mind, behaviour, groups and social dynamics.</p>
                 </a>
-                
-                <a href="pages/science-technology.html" class="genre-card">
-                    <span class="genre-icon">🔬</span>
-                    <h3>Science & Technology</h3>
-                    <p>Discoveries, innovation, and the nature of knowledge.</p>
+                <a href="pages/science-technology.html" class="genre-card" style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--border-radius); padding: 1.25rem; text-decoration: none; color: var(--text-primary); display: flex; flex-direction: column;">
+                    <span style="font-size: 2rem; margin-bottom: 0.5rem;">🔬</span>
+                    <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.3rem;">Science & Technology</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">Discoveries, innovation, and the nature of knowledge.</p>
                 </a>
-                
-                <!-- FICTION GENRES -->
-                <a href="pages/fiction-literature.html" class="genre-card">
-                    <span class="genre-icon">📖</span>
-                    <h3>Fiction & Literature</h3>
-                    <p>Contemporary novels, literary fiction and short stories.</p>
+                <!-- fiction -->
+                <a href="pages/fiction-literature.html" class="genre-card" style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--border-radius); padding: 1.25rem; text-decoration: none; color: var(--text-primary); display: flex; flex-direction: column;">
+                    <span style="font-size: 2rem; margin-bottom: 0.5rem;">📖</span>
+                    <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.3rem;">Fiction & Literature</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">Contemporary novels, literary fiction and short stories.</p>
                 </a>
-                
-                <a href="pages/fiction-science-fiction.html" class="genre-card">
-                    <span class="genre-icon">🚀</span>
-                    <h3>Science Fiction</h3>
-                    <p>Futures, aliens, tech speculation and dystopias.</p>
+                <a href="pages/fiction-science-fiction.html" class="genre-card" style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--border-radius); padding: 1.25rem; text-decoration: none; color: var(--text-primary); display: flex; flex-direction: column;">
+                    <span style="font-size: 2rem; margin-bottom: 0.5rem;">🚀</span>
+                    <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.3rem;">Science Fiction</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">Futures, aliens, tech speculation and dystopias.</p>
                 </a>
-                
-                <a href="pages/fiction-fantasy.html" class="genre-card">
-                    <span class="genre-icon">🧙</span>
-                    <h3>Fantasy</h3>
-                    <p>Magic, worldbuilding, epics and mythical creatures.</p>
+                <a href="pages/fiction-fantasy.html" class="genre-card" style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--border-radius); padding: 1.25rem; text-decoration: none; color: var(--text-primary); display: flex; flex-direction: column;">
+                    <span style="font-size: 2rem; margin-bottom: 0.5rem;">🧙</span>
+                    <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.3rem;">Fantasy</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">Magic, worldbuilding, epics and mythical creatures.</p>
                 </a>
-                
-                <a href="pages/fiction-mystery-thriller.html" class="genre-card">
-                    <span class="genre-icon">🔍</span>
-                    <h3>Mystery & Thriller</h3>
-                    <p>Suspense, crime, puzzles and psychological tension.</p>
+                <a href="pages/fiction-mystery-thriller.html" class="genre-card" style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--border-radius); padding: 1.25rem; text-decoration: none; color: var(--text-primary); display: flex; flex-direction: column;">
+                    <span style="font-size: 2rem; margin-bottom: 0.5rem;">🔍</span>
+                    <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.3rem;">Mystery & Thriller</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">Suspense, crime, puzzles and psychological tension.</p>
                 </a>
-                
-                <a href="pages/fiction-classics.html" class="genre-card">
-                    <span class="genre-icon">🏛️</span>
-                    <h3>Classics</h3>
-                    <p>Enduring works, timeless prose and literary heritage.</p>
+                <a href="pages/fiction-classics.html" class="genre-card" style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--border-radius); padding: 1.25rem; text-decoration: none; color: var(--text-primary); display: flex; flex-direction: column;">
+                    <span style="font-size: 2rem; margin-bottom: 0.5rem;">🏛️</span>
+                    <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.3rem;">Classics</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">Enduring works, timeless prose and literary heritage.</p>
                 </a>
-            </div>
-        </section>
-
-        <!-- short note about 2026+ focus -->
-        <section class="note-section">
-            <div class="year-note">
-                <span class="note-icon">⏳</span>
-                <p><strong>Reading year starts 2026</strong> — every book you see across these pages was read after Jan 1, 2026. No older entries, pure forward momentum.</p>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
         <div class="footer-decoration"></div>
         <p>&copy; <span id="current-year">2026</span> Olem's Reading List. All rights reserved.</p>
         <p class="footer-quote">"The more that you read, the more things you will know. The more that you learn, the more places you'll go." — Dr. Seuss</p>
     </footer>
 
-    <!-- Scroll to Top Button -->
     <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M12 19V5M5 12l7-7 7 7"/>
@@ -203,4 +162,4 @@
 
     <script src="js/app.js"></script>
 </body>
-    </html>
+</html>
