@@ -5,71 +5,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Olem's Reading List</title>
     <link rel="stylesheet" href="css/style.css">
-    <meta name="description" content="A curated collection of books I've read, with reviews and analysis.">
+    <meta name="description" content="Books I've read with reviews and analysis.">
     <link rel="icon" href="olem.png" sizes="any">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        /* Minimal additions - just for homepage warmth */
+        .welcome-message {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .welcome-message p {
+            font-size: 1.2rem;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+        
         .category-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 1.25rem;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
             margin-top: 1rem;
         }
         
-        .genre-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: var(--border-radius);
-            padding: 1.5rem 1rem;
+        .category-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
             text-decoration: none;
-            color: var(--text-primary);
+            color: #2d3748;
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s ease;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            text-align: center;
-            transition: all 0.2s ease;
         }
         
-        .genre-card:hover {
-            border-color: var(--accent-blue);
-            transform: translateY(-4px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        .category-card:hover {
+            transform: translateY(-2px);
+            border-color: #cbd5e0;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.05);
         }
-
-        .genre-icon {
+        
+        .category-icon {
             font-size: 2.5rem;
-            margin-bottom: 0.75rem;
-            line-height: 1;
+            margin-bottom: 1rem;
         }
         
-        .genre-card h3 {
-            font-size: 1.1rem;
+        .category-title {
+            font-size: 1.3rem;
             font-weight: 600;
-            margin-bottom: 0.4rem;
-            color: var(--text-primary);
+            margin-bottom: 0.25rem;
         }
         
-        .genre-card p {
+        .category-description {
+            font-size: 0.95rem;
+            color: #718096;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+        
+        .category-footer {
+            margin-top: auto;
             font-size: 0.9rem;
-            color: var(--text-muted);
-            margin: 0;
-            line-height: 1.5;
-            max-width: 220px;
+            color: #a0aec0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px dashed #e2e8f0;
+            padding-top: 0.75rem;
         }
         
-        .intro-section p {
-            text-align: center;
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            max-width: 600px;
-            margin: 1rem auto 2rem;
+        .book-count {
+            font-weight: 500;
+        }
+        
+        .arrow {
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+        
+        .category-card:hover .arrow {
+            opacity: 1;
+        }
+        
+        /* Two-column layout for nonfiction/fiction headers */
+        .section-divider {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 2rem 0 1rem 0;
+        }
+        
+        .section-divider h2 {
+            margin: 0;
+            white-space: nowrap;
+        }
+        
+        .divider-line {
+            height: 2px;
+            background: linear-gradient(90deg, #e2e8f0, transparent);
+            flex-grow: 1;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Olem's Reading List</h1>
-        <p>Welcome to my reading journey — a complete collection of books I've read, with ratings and reviews.</p>
+        <p>Showcasing books I've read with reviews and analysis.</p>
         <div class="header-decoration"></div>
         <button class="openbtn" onclick="openNav()" aria-label="Open navigation menu">☰ Menu</button>
     </header>
@@ -102,119 +146,206 @@
     </nav>
 
     <main>
-        <section class="book-section">           
-            <div class="category-grid">
-                <!-- nonfiction -->
-                <a href="pages/biographies-memoirs.html" class="genre-card">
-                    <span class="genre-icon">👤</span>
-                    <h3>Biographies & Memoirs</h3>
-                    <p>Lives, lessons, and personal journeys — from innovators to unsung voices.</p>
-                </a>
-                
-                <a href="pages/business-economics.html" class="genre-card">
-                    <span class="genre-icon">📈</span>
-                    <h3>Business & Economics</h3>
-                    <p>Markets, strategy, organisational behaviour and economic thinking.</p>
-                </a>
-                
-                <a href="pages/computer-science.html" class="genre-card">
-                    <span class="genre-icon">💻</span>
-                    <h3>Computer Science</h3>
-                    <p>Systems, theory, computing paradigms and tech culture.</p>
-                </a>
-                
-                <a href="pages/data-structures-algorithms.html" class="genre-card">
-                    <span class="genre-icon">📊</span>
-                    <h3>Data Structures & Algorithms</h3>
-                    <p>Foundations of efficient problem solving and code.</p>
-                </a>
-                
-                <a href="pages/finance-wealth.html" class="genre-card">
-                    <span class="genre-icon">💰</span>
-                    <h3>Finance & Wealth</h3>
-                    <p>Investing, financial independence, and money mindset.</p>
-                </a>
-                
-                <a href="pages/history-politics.html" class="genre-card">
-                    <span class="genre-icon">📜</span>
-                    <h3>History & Politics</h3>
-                    <p>Events, power structures, and the stories that shaped us.</p>
-                </a>
-                
-                <a href="pages/mathematics.html" class="genre-card">
-                    <span class="genre-icon">🔢</span>
-                    <h3>Mathematics</h3>
-                    <p>Elegant proofs, mathematical thinking, and numerical worlds.</p>
-                </a>
-                
-                <a href="pages/personal-development.html" class="genre-card">
-                    <span class="genre-icon">🧠</span>
-                    <h3>Personal Development</h3>
-                    <p>Habits, productivity, self-awareness and growth.</p>
-                </a>
-                
-                <a href="pages/philosophy.html" class="genre-card">
-                    <span class="genre-icon">🤔</span>
-                    <h3>Philosophy</h3>
-                    <p>Ethics, logic, existential questions and critical thought.</p>
-                </a>
-                
-                <a href="pages/physical-exercise-health.html" class="genre-card">
-                    <span class="genre-icon">💪</span>
-                    <h3>Physical Exercise & Health</h3>
-                    <p>Movement, physiology, nutrition and well-being.</p>
-                </a>
-                
-                <a href="pages/programming.html" class="genre-card">
-                    <span class="genre-icon">⚙️</span>
-                    <h3>Programming</h3>
-                    <p>Languages, craftsmanship, software design and clean code.</p>
-                </a>
-                
-                <a href="pages/psychology-sociology.html" class="genre-card">
-                    <span class="genre-icon">🧪</span>
-                    <h3>Psychology & Sociology</h3>
-                    <p>Mind, behaviour, groups and social dynamics.</p>
-                </a>
-                
-                <a href="pages/science-technology.html" class="genre-card">
-                    <span class="genre-icon">🔬</span>
-                    <h3>Science & Technology</h3>
-                    <p>Discoveries, innovation, and the nature of knowledge.</p>
-                </a>
-                
-                <!-- fiction -->
-                <a href="pages/fiction-literature.html" class="genre-card">
-                    <span class="genre-icon">📖</span>
-                    <h3>Fiction & Literature</h3>
-                    <p>Contemporary novels, literary fiction and short stories.</p>
-                </a>
-                
-                <a href="pages/fiction-science-fiction.html" class="genre-card">
-                    <span class="genre-icon">🚀</span>
-                    <h3>Science Fiction</h3>
-                    <p>Futures, aliens, tech speculation and dystopias.</p>
-                </a>
-                
-                <a href="pages/fiction-fantasy.html" class="genre-card">
-                    <span class="genre-icon">🧙</span>
-                    <h3>Fantasy</h3>
-                    <p>Magic, worldbuilding, epics and mythical creatures.</p>
-                </a>
-                
-                <a href="pages/fiction-mystery-thriller.html" class="genre-card">
-                    <span class="genre-icon">🔍</span>
-                    <h3>Mystery & Thriller</h3>
-                    <p>Suspense, crime, puzzles and psychological tension.</p>
-                </a>
-                
-                <a href="pages/fiction-classics.html" class="genre-card">
-                    <span class="genre-icon">🏛️</span>
-                    <h3>Classics</h3>
-                    <p>Enduring works, timeless prose and literary heritage.</p>
-                </a>
-            </div>
-        </section>
+        <!-- Just a warm welcome - no stats, no featured books -->
+        <div class="welcome-message">
+            <p>I read to understand the world — one book at a time. Here are the ones that stuck with me, organized by what they taught me.</p>
+        </div>
+
+        <!-- Nonfiction section with divider -->
+        <div class="section-divider">
+            <h2>📚 Nonfiction</h2>
+            <div class="divider-line"></div>
+        </div>
+
+        <div class="category-grid">
+            <a href="pages/biographies-memoirs.html" class="category-card">
+                <span class="category-icon">👤</span>
+                <span class="category-title">Biographies & Memoirs</span>
+                <span class="category-description">Lives, lessons, and personal journeys</span>
+                <div class="category-footer">
+                    <span class="book-count">8 books</span>
+                    <span class="arrow">→</span>
+                </div>
+            </a>
+
+            <a href="pages/business-economics.html" class="category-card">
+                <span class="category-icon">📈</span>
+                <span class="category-title">Business & Economics</span>
+                <span class="category-description">Markets, strategy, and organizations</span>
+                <div class="category-footer">
+                    <span class="book-count">0 books</span>
+                    <span class="arrow">→</span>
+                </div>
+            </a>
+
+            <a href="pages/computer-science.html" class="category-card">
+                <span class="category-icon">💻</span>
+                <span class="category-title">Computer Science</span>
+                <span class="category-description">Theory, systems, and computation</span>
+                <div class="category-footer">
+                    <span class="book-count">0 books</span>
+                    <span class="arrow">→</span>
+                </div>
+            </a>
+
+            <a href="pages/data-structures-algorithms.html" class="category-card">
+                <span class="category-icon">📊</span>
+                <span class="category-title">Data Structures & Algorithms</span>
+                <span class="category-description">Problem-solving and efficient code</span>
+                <div class="category-footer">
+                    <span class="book-count">0 books</span>
+                    <span class="arrow">→</span>
+                </div>
+            </a>
+
+            <a href="pages/finance-wealth.html" class="category-card">
+                <span class="category-icon">💰</span>
+                <span class="category-title">Finance & Wealth</span>
+                <span class="category-description">Money, investing, and financial wisdom</span>
+                <div class="category-footer">
+                    <span class="book-count">0 books</span>
+                    <span class="arrow">→</span>
+                </div>
+            </a>
+
+            <a href="pages/history-politics.html" class="category-card">
+                <span class="category-icon">📜</span>
+                <span class="category-title">History & Politics</span>
+                <span class="category-description">Events, power, and how we got here</span>
+                <div class="category-footer">
+                    <span class="book-count">0 books</span>
+                    <span class="arrow">→</span>
+                </div>
+            </a>
+
+            <a href="pages/mathematics.html" class="category-card">
+                <span class="category-icon">🔢</span>
+                <span class="category-title">Mathematics</span>
+                <span class="category-description">Numbers, patterns, and proofs</span>
+                <div class="category-footer">
+                    <span class="book-count">1 book</span>
+                    <span class="arrow">→</span>
+                </div>
+            </a>
+
+            <a href="pages/personal-development.html" class="category-card">
+                <span class="category-icon">🧠</span>
+                <span class="category-title">Personal Development</span>
+                <span class="category-description">Growth, habits, and becoming better</span>
+                <div class="category-footer">
+                    <span class="book-count">16 books</span>
+                    <span class="arrow">→</span>
+                </div>
+            </a>
+
+            <a href="pages/philosophy.html" class="category-card">
+                <span class="category-icon">🤔</span>
+                <span class="category-title">Philosophy</span>
+                <span class="category-description">Ethics, existence, and critical thought</span>
+                <div class="category-footer">
+                    <span class="book-count">9 books</span>
+                    <span class="arrow">→</span>
+                </div>
+            </a>
+
+            <a href="pages/physical-exercise-health.html" class="category-card">
+                <span class="category-icon">💪</span>
+                <span class="category-title">Physical Exercise & Health</span>
+                <span class="category-description">Fitness, strength, and well-being</span>
+                <div class="category-footer">
+                    <span class="book-count">1 book</span>
+                    <span class="arrow">→</span>
+                </div>
+            </a>
+
+            <a href="pages/programming.html" class="category-card">
+                <span class="category-icon">⚙️</span>
+                <span class="category-title">Programming</span>
+                <span class="category-description">Languages, practice, and craft</span>
+                <div class="category-footer">
+                    <span class="book-count">7 books</span>
+                    <span class="arrow">→</span>
+                </div>
+            </a>
+
+            <a href="pages/psychology-sociology.html" class="category-card">
+                <span class="category-icon">🧪</span>
+                <span class="category-title">Psychology & Sociology</span>
+                <span class="category-description">Mind, behavior, and society</span>
+                <div class="category-footer">
+                    <span class="book-count">5 books</span>
+                    <span class="arrow">→</span>
+                </div>
+            </a>
+
+            <a href="pages/science-technology.html" class="category-card">
+                <span class="category-icon">🔬</span>
+                <span class="category-title">Science & Technology</span>
+                <span class="category-description">Discovery, innovation, and understanding</span>
+                <div class="category-footer">
+                    <span class="book-count">0 books</span>
+                    <span class="arrow">→</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- Fiction section with divider -->
+        <div class="section-divider">
+            <h2>📖 Fiction</h2>
+            <div class="divider-line"></div>
+        </div>
+
+        <div class="category-grid">
+            <a href="pages/fiction-literature.html" class="category-card">
+                <span class="category-icon">📖</span>
+                <span class="category-title">Fiction & Literature</span>
+                <span class="category-description">Novels, stories, and literary journeys</span>
+                <div class="category-footer">
+                    <span class="book-count">8 books</span>
+                    <span class="arrow">→</span>
+                </div>
+            </a>
+
+            <a href="pages/fiction-science-fiction.html" class="category-card">
+                <span class="category-icon">🚀</span>
+                <span class="category-title">Science Fiction</span>
+                <span class="category-description">Future, technology, and imagination</span>
+                <div class="category-footer">
+                    <span class="book-count">0 books</span>
+                    <span class="arrow">→</span>
+                </div>
+            </a>
+
+            <a href="pages/fiction-fantasy.html" class="category-card">
+                <span class="category-icon">🧙</span>
+                <span class="category-title">Fantasy</span>
+                <span class="category-description">Magic, worlds, and epic tales</span>
+                <div class="category-footer">
+                    <span class="book-count">0 books</span>
+                    <span class="arrow">→</span>
+                </div>
+            </a>
+
+            <a href="pages/fiction-mystery-thriller.html" class="category-card">
+                <span class="category-icon">🔍</span>
+                <span class="category-title">Mystery & Thriller</span>
+                <span class="category-description">Suspense, crime, and tension</span>
+                <div class="category-footer">
+                    <span class="book-count">3 books</span>
+                    <span class="arrow">→</span>
+                </div>
+            </a>
+
+            <a href="pages/fiction-classics.html" class="category-card">
+                <span class="category-icon">🏛️</span>
+                <span class="category-title">Classics</span>
+                <span class="category-description">Timeless stories that endure</span>
+                <div class="category-footer">
+                    <span class="book-count">0 books</span>
+                    <span class="arrow">→</span>
+                </div>
+            </a>
+        </div>
     </main>
 
     <footer>
