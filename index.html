@@ -9,51 +9,65 @@
     <link rel="icon" href="olem.png" sizes="any">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Just the essentials */
+        /* Center the main content */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+        }
+        
         .home-intro {
+            text-align: center;
             margin-bottom: 2rem;
             font-size: 1.1rem;
             color: #4a4a4a;
-            max-width: 600px;
         }
         
         .category-section {
-            margin-bottom: 2.5rem;
+            margin-bottom: 3rem;
         }
         
         .category-section h2 {
-            font-size: 1.5rem;
-            margin-bottom: 0.75rem;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
             border-bottom: 1px solid #eaeaea;
-            padding-bottom: 0.25rem;
+            padding-bottom: 0.5rem;
         }
         
         .category-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 1.25rem;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
         }
         
-        .category-item a {
+        .category-card {
+            background: white;
+            border: 1px solid #eaeaea;
+            border-radius: 8px;
+            padding: 1.25rem;
             text-decoration: none;
             color: #2c3e50;
-            display: block;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
         }
         
-        .category-item .title {
+        .category-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            border-color: #d0d0d0;
+        }
+        
+        .card-title {
+            font-size: 1.2rem;
             font-weight: 500;
-            font-size: 1.1rem;
+            margin-bottom: 0.4rem;
         }
         
-        .category-item .description {
+        .card-description {
             font-size: 0.9rem;
             color: #6c757d;
-            margin-top: 0.2rem;
             line-height: 1.4;
-        }
-        
-        .category-item a:hover .title {
-            text-decoration: underline;
         }
     </style>
 </head>
@@ -93,91 +107,64 @@
     </nav>
 
     <main>
-        <!-- Simple intro -->
         <p class="home-intro">One reader's journey through books worth remembering.</p>
 
         <!-- Nonfiction -->
         <div class="category-section">
             <h2>📚 Nonfiction</h2>
             <div class="category-grid">
-                <div class="category-item">
-                    <a href="pages/biographies-memoirs.html">
-                        <span class="title">👤 Biographies & Memoirs</span>
-                        <span class="description">Lives, lessons, and personal journeys</span>
-                    </a>
-                </div>
-                <div class="category-item">
-                    <a href="pages/business-economics.html">
-                        <span class="title">📈 Business & Economics</span>
-                        <span class="description">Markets, strategy, and organizations</span>
-                    </a>
-                </div>
-                <div class="category-item">
-                    <a href="pages/computer-science.html">
-                        <span class="title">💻 Computer Science</span>
-                        <span class="description">Theory, systems, and computation</span>
-                    </a>
-                </div>
-                <div class="category-item">
-                    <a href="pages/data-structures-algorithms.html">
-                        <span class="title">📊 Data Structures & Algorithms</span>
-                        <span class="description">Problem-solving and efficient code</span>
-                    </a>
-                </div>
-                <div class="category-item">
-                    <a href="pages/finance-wealth.html">
-                        <span class="title">💰 Finance & Wealth</span>
-                        <span class="description">Money, investing, and financial wisdom</span>
-                    </a>
-                </div>
-                <div class="category-item">
-                    <a href="pages/history-politics.html">
-                        <span class="title">📜 History & Politics</span>
-                        <span class="description">Events, power, and how we got here</span>
-                    </a>
-                </div>
-                <div class="category-item">
-                    <a href="pages/mathematics.html">
-                        <span class="title">🔢 Mathematics</span>
-                        <span class="description">Numbers, patterns, and proofs</span>
-                    </a>
-                </div>
-                <div class="category-item">
-                    <a href="pages/personal-development.html">
-                        <span class="title">🧠 Personal Development</span>
-                        <span class="description">Growth, habits, and becoming better</span>
-                    </a>
-                </div>
-                <div class="category-item">
-                    <a href="pages/philosophy.html">
-                        <span class="title">🤔 Philosophy</span>
-                        <span class="description">Ethics, existence, and critical thought</span>
-                    </a>
-                </div>
-                <div class="category-item">
-                    <a href="pages/physical-exercise-health.html">
-                        <span class="title">💪 Physical Exercise & Health</span>
-                        <span class="description">Fitness, strength, and well-being</span>
-                    </a>
-                </div>
-                <div class="category-item">
-                    <a href="pages/programming.html">
-                        <span class="title">⚙️ Programming</span>
-                        <span class="description">Languages, practice, and craft</span>
-                    </a>
-                </div>
-                <div class="category-item">
-                    <a href="pages/psychology-sociology.html">
-                        <span class="title">🧪 Psychology & Sociology</span>
-                        <span class="description">Mind, behavior, and society</span>
-                    </a>
-                </div>
-                <div class="category-item">
-                    <a href="pages/science-technology.html">
-                        <span class="title">🔬 Science & Technology</span>
-                        <span class="description">Discovery, innovation, and understanding</span>
-                    </a>
-                </div>
+                <a href="pages/biographies-memoirs.html" class="category-card">
+                    <span class="card-title">👤 Biographies & Memoirs</span>
+                    <span class="card-description">Lives, lessons, and personal journeys</span>
+                </a>
+                <a href="pages/business-economics.html" class="category-card">
+                    <span class="card-title">📈 Business & Economics</span>
+                    <span class="card-description">Markets, strategy, and organizations</span>
+                </a>
+                <a href="pages/computer-science.html" class="category-card">
+                    <span class="card-title">💻 Computer Science</span>
+                    <span class="card-description">Theory, systems, and computation</span>
+                </a>
+                <a href="pages/data-structures-algorithms.html" class="category-card">
+                    <span class="card-title">📊 Data Structures & Algorithms</span>
+                    <span class="card-description">Problem-solving and efficient code</span>
+                </a>
+                <a href="pages/finance-wealth.html" class="category-card">
+                    <span class="card-title">💰 Finance & Wealth</span>
+                    <span class="card-description">Money, investing, and financial wisdom</span>
+                </a>
+                <a href="pages/history-politics.html" class="category-card">
+                    <span class="card-title">📜 History & Politics</span>
+                    <span class="card-description">Events, power, and how we got here</span>
+                </a>
+                <a href="pages/mathematics.html" class="category-card">
+                    <span class="card-title">🔢 Mathematics</span>
+                    <span class="card-description">Numbers, patterns, and proofs</span>
+                </a>
+                <a href="pages/personal-development.html" class="category-card">
+                    <span class="card-title">🧠 Personal Development</span>
+                    <span class="card-description">Growth, habits, and becoming better</span>
+                </a>
+                <a href="pages/philosophy.html" class="category-card">
+                    <span class="card-title">🤔 Philosophy</span>
+                    <span class="card-description">Ethics, existence, and critical thought</span>
+                </a>
+                <a href="pages/physical-exercise-health.html" class="category-card">
+                    <span class="card-title">💪 Physical Exercise & Health</span>
+                    <span class="card-description">Fitness, strength, and well-being</span>
+                </a>
+                <a href="pages/programming.html" class="category-card">
+                    <span class="card-title">⚙️ Programming</span>
+                    <span class="card-description">Languages, practice, and craft</span>
+                </a>
+                <a href="pages/psychology-sociology.html" class="category-card">
+                    <span class="card-title">🧪 Psychology & Sociology</span>
+                    <span class="card-description">Mind, behavior, and society</span>
+                </a>
+                <a href="pages/science-technology.html" class="category-card">
+                    <span class="card-title">🔬 Science & Technology</span>
+                    <span class="card-description">Discovery, innovation, and understanding</span>
+                </a>
             </div>
         </div>
 
@@ -185,36 +172,26 @@
         <div class="category-section">
             <h2>📖 Fiction</h2>
             <div class="category-grid">
-                <div class="category-item">
-                    <a href="pages/fiction-literature.html">
-                        <span class="title">📖 Fiction & Literature</span>
-                        <span class="description">Novels, stories, and literary journeys</span>
-                    </a>
-                </div>
-                <div class="category-item">
-                    <a href="pages/fiction-science-fiction.html">
-                        <span class="title">🚀 Science Fiction</span>
-                        <span class="description">Future, technology, and imagination</span>
-                    </a>
-                </div>
-                <div class="category-item">
-                    <a href="pages/fiction-fantasy.html">
-                        <span class="title">🧙 Fantasy</span>
-                        <span class="description">Magic, worlds, and epic tales</span>
-                    </a>
-                </div>
-                <div class="category-item">
-                    <a href="pages/fiction-mystery-thriller.html">
-                        <span class="title">🔍 Mystery & Thriller</span>
-                        <span class="description">Suspense, crime, and tension</span>
-                    </a>
-                </div>
-                <div class="category-item">
-                    <a href="pages/fiction-classics.html">
-                        <span class="title">🏛️ Classics</span>
-                        <span class="description">Timeless stories that endure</span>
-                    </a>
-                </div>
+                <a href="pages/fiction-literature.html" class="category-card">
+                    <span class="card-title">📖 Fiction & Literature</span>
+                    <span class="card-description">Novels, stories, and literary journeys</span>
+                </a>
+                <a href="pages/fiction-science-fiction.html" class="category-card">
+                    <span class="card-title">🚀 Science Fiction</span>
+                    <span class="card-description">Future, technology, and imagination</span>
+                </a>
+                <a href="pages/fiction-fantasy.html" class="category-card">
+                    <span class="card-title">🧙 Fantasy</span>
+                    <span class="card-description">Magic, worlds, and epic tales</span>
+                </a>
+                <a href="pages/fiction-mystery-thriller.html" class="category-card">
+                    <span class="card-title">🔍 Mystery & Thriller</span>
+                    <span class="card-description">Suspense, crime, and tension</span>
+                </a>
+                <a href="pages/fiction-classics.html" class="category-card">
+                    <span class="card-title">🏛️ Classics</span>
+                    <span class="card-description">Timeless stories that endure</span>
+                </a>
             </div>
         </div>
     </main>
