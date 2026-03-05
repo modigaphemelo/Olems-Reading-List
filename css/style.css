@@ -250,20 +250,21 @@ main {
 }
 
 .section-header {
+    text-align: center;
     margin-bottom: var(--spacing-6);
     padding-bottom: var(--spacing-3);
     border-bottom: 1px solid var(--border-light);
 }
 
 .section-header h2 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     color: var(--text-primary);
     margin-bottom: var(--spacing-1);
     font-weight: 500;
 }
 
 .section-header p {
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: var(--text-muted);
 }
 
@@ -272,6 +273,7 @@ main {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: var(--spacing-6);
+    justify-items: center;
 }
 
 /* BOOK CARD */
@@ -287,6 +289,8 @@ main {
     transition: all 0.2s ease;
     position: relative;
     height: 100%;
+    width: 100%;
+    max-width: 220px;
     box-shadow: var(--shadow-sm);
 }
 
@@ -306,7 +310,7 @@ main {
 
 .book-title {
     padding: var(--spacing-3) var(--spacing-3) var(--spacing-2);
-    text-align: left;
+    text-align: center;
 }
 
 .book-title h3 {
@@ -329,6 +333,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     gap: 0.3rem;
+    justify-content: center;
 }
 
 .book-tag {
@@ -592,10 +597,13 @@ main {
 }
 
 .review-section h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: var(--text-primary);
     margin-bottom: var(--spacing-4);
-    font-weight: 500;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    border-left: 4px solid var(--accent-blue-light);
+    padding-left: var(--spacing-3);
 }
 
 .review-section p {
@@ -612,9 +620,9 @@ main {
 
 .analysis-point h3 {
     color: var(--text-primary);
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     margin-bottom: var(--spacing-2);
-    font-weight: 500;
+    font-weight: 550;
 }
 
 .philosophy-block {
@@ -627,9 +635,9 @@ main {
 
 .philosophy-block h3 {
     color: var(--text-primary);
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     margin-bottom: var(--spacing-2);
-    font-weight: 500;
+    font-weight: 550;
 }
 
 .critique-section {
@@ -637,6 +645,10 @@ main {
     border: 1px solid var(--border-light);
     padding: var(--spacing-5);
     border-radius: var(--radius-md);
+}
+
+.critique-section h2 {
+    border-left-color: #dc2626;
 }
 
 .critique-point {
@@ -653,9 +665,9 @@ main {
 
 .critique-point h3 {
     color: var(--text-primary);
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin-bottom: var(--spacing-2);
-    font-weight: 500;
+    font-weight: 550;
 }
 
 .conclusion-section {
@@ -663,6 +675,10 @@ main {
     border: 1px solid var(--border-light);
     padding: var(--spacing-5);
     border-radius: var(--radius-md);
+}
+
+.conclusion-section h2 {
+    border-left-color: var(--accent-green);
 }
 
 .final-verdict {
@@ -675,9 +691,9 @@ main {
 
 .final-verdict h3 {
     color: var(--text-primary);
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     margin-bottom: var(--spacing-2);
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .final-verdict p {
@@ -694,10 +710,12 @@ main {
 }
 
 .related-books h2 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: var(--text-primary);
     margin-bottom: var(--spacing-4);
     font-weight: 500;
+    border-left: 4px solid var(--accent-blue-light);
+    padding-left: var(--spacing-3);
 }
 
 .related-links {
@@ -813,6 +831,10 @@ footer p {
         gap: var(--spacing-4);
     }
     
+    .book-card {
+        max-width: 180px;
+    }
+    
     .book-card img {
         aspect-ratio: 2/3;
     }
@@ -826,7 +848,7 @@ footer p {
     }
     
     .section-header h2 {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
     }
     
     .review-stats {
@@ -843,6 +865,10 @@ footer p {
         max-width: 300px;
         margin: 0 auto;
     }
+    
+    .review-section h2 {
+        font-size: 1.5rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -853,6 +879,10 @@ footer p {
     .book-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: var(--spacing-3);
+    }
+    
+    .book-card {
+        max-width: 100%;
     }
     
     .book-title h3 {
@@ -887,6 +917,10 @@ footer p {
         justify-content: center;
     }
     
+    .review-section h2 {
+        font-size: 1.3rem;
+    }
+    
     #scrollToTopBtn {
         bottom: 1.2rem;
         right: 1.2rem;
@@ -917,4 +951,4 @@ button:focus,
 a:focus {
     outline: 2px solid var(--accent-blue-light);
     outline-offset: 2px;
-                                     }
+}
