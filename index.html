@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Olem's Reading List</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="Books I've read with reviews and analysis.">
+    <link rel="icon" href="olem.png" sizes="any">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Olem's Reading List</h1>
+        <p>Showcasing books I've read with reviews and analysis.</p>
+        <div class="header-decoration"></div>
+        <button class="openbtn" onclick="openNav()" aria-label="Open navigation menu">☰ Menu</button>
+    </header>
+
+    <nav id="mySidenav" class="sidenav">
+        <button class="closebtn" onclick="closeNav()" aria-label="Close navigation menu">&times;</button>
+        <ul>
+            <li><a href="index.html" aria-current="page">🏠 Home</a></li>
+            <li class="category-title">📚 Nonfiction</li>
+            <li><a href="genres/biographies-memoirs.html">👤 Biographies & Memoirs</a></li>
+            <li><a href="genres/business-economics.html">📈 Business & Economics</a></li>
+            <li><a href="genres/computer-science.html">💻 Computer Science</a></li>
+            <li><a href="genres/design-creativity.html">🎨 Design & Creativity</a></li>
+            <li><a href="genres/education-learning.html">📚 Education & Learning</a></li>
+            <li><a href="genres/finance-wealth.html">💰 Finance & Wealth</a></li>
+            <li><a href="genres/history-politics.html">📜 History & Politics</a></li>
+            <li><a href="genres/law-ethics.html">⚖️ Law & Ethics</a></li>
+            <li><a href="genres/mathematics.html">🔢 Mathematics</a></li>
+            <li><a href="genres/personal-development.html">🧠 Personal Development</a></li>
+            <li><a href="genres/philosophy.html">🤔 Philosophy</a></li>
+            <li><a href="genres/physical-exercise-health.html">💪 Physical Exercise & Health</a></li>
+            <li><a href="genres/psychology-sociology.html">🧪 Psychology & Sociology</a></li>
+            <li><a href="genres/science-technology.html">🔬 Science & Technology</a></li>
+            <li><a href="genres/true-crime.html">🔪 True Crime</a></li>
+            <li class="category-title">📖 Fiction</li>
+            <li><a href="genres/fiction-literature.html">📖 Fiction & Literature</a></li>
+            <li><a href="genres/fiction-short-stories.html">📚 Short Stories</a></li>
+            <li><a href="genres/fiction-science-fiction.html">🚀 Science Fiction</a></li>
+            <li><a href="genres/fiction-fantasy.html">🧙 Fantasy</a></li>
+            <li><a href="genres/fiction-mystery-thriller.html">🔍 Mystery & Thriller</a></li>
+            <li><a href="genres/fiction-classics.html">🏛️ Classics</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <p class="home-intro">One reader's journey through books worth remembering.</p>
+
+        <div class="category-section">
+            <h2>📚 Nonfiction</h2>
+            <div class="category-grid">
+                <a href="genres/biographies-memoirs.html" class="category-card">
+                    <span class="title">👤 Biographies & Memoirs</span>
+                    <span class="description">Lives, lessons, and personal journeys</span>
+                </a>
+                <a href="genres/business-economics.html" class="category-card">
+                    <span class="title">📈 Business & Economics</span>
+                    <span class="description">Markets, strategy, and organizations</span>
+                </a>
+                <a href="genres/computer-science.html" class="category-card">
+                    <span class="title">💻 Computer Science</span>
+                    <span class="description">Programming, algorithms, and theory</span>
+                </a>
+                <a href="genres/design-creativity.html" class="category-card">
+                    <span class="title">🎨 Design & Creativity</span>
+                    <span class="description">Process, visual thinking, innovation</span>
+                </a>
+                <a href="genres/education-learning.html" class="category-card">
+                    <span class="title">📚 Education & Learning</span>
+                    <span class="description">How we learn, teach, and master skills</span>
+                </a>
+                <a href="genres/finance-wealth.html" class="category-card">
+                    <span class="title">💰 Finance & Wealth</span>
+                    <span class="description">Money, investing, and financial wisdom</span>
+                </a>
+                <a href="genres/history-politics.html" class="category-card">
+                    <span class="title">📜 History & Politics</span>
+                    <span class="description">Events, power, and how we got here</span>
+                </a>
+                <a href="genres/law-ethics.html" class="category-card">
+                    <span class="title">⚖️ Law & Ethics</span>
+                    <span class="description">Justice, morality, and frameworks</span>
+                </a>
+                <a href="genres/mathematics.html" class="category-card">
+                    <span class="title">🔢 Mathematics</span>
+                    <span class="description">Numbers, patterns, and proofs</span>
+                </a>
+                <a href="genres/personal-development.html" class="category-card">
+                    <span class="title">🧠 Personal Development</span>
+                    <span class="description">Growth, habits, and becoming better</span>
+                </a>
+                <a href="genres/philosophy.html" class="category-card">
+                    <span class="title">🤔 Philosophy</span>
+                    <span class="description">Ethics, existence, and critical thought</span>
+                </a>
+                <a href="genres/physical-exercise-health.html" class="category-card">
+                    <span class="title">💪 Physical Exercise & Health</span>
+                    <span class="description">Fitness, strength, and well-being</span>
+                </a>
+                <a href="genres/psychology-sociology.html" class="category-card">
+                    <span class="title">🧪 Psychology & Sociology</span>
+                    <span class="description">Mind, behavior, and society</span>
+                </a>
+                <a href="genres/science-technology.html" class="category-card">
+                    <span class="title">🔬 Science & Technology</span>
+                    <span class="description">Discovery, innovation, and understanding</span>
+                </a>
+                <a href="genres/true-crime.html" class="category-card">
+                    <span class="title">🔪 True Crime</span>
+                    <span class="description">Real crimes, investigations, and justice</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="category-section">
+            <h2>📖 Fiction</h2>
+            <div class="category-grid">
+                <a href="genres/fiction-literature.html" class="category-card">
+                    <span class="title">📖 Fiction & Literature</span>
+                    <span class="description">Novels, stories, and literary journeys</span>
+                </a>
+                <a href="genres/fiction-short-stories.html" class="category-card">
+                    <span class="title">📚 Short Stories</span>
+                    <span class="description">Brief, compressed works of fiction</span>
+                </a>
+                <a href="genres/fiction-science-fiction.html" class="category-card">
+                    <span class="title">🚀 Science Fiction</span>
+                    <span class="description">Future, technology, and imagination</span>
+                </a>
+                <a href="genres/fiction-fantasy.html" class="category-card">
+                    <span class="title">🧙 Fantasy</span>
+                    <span class="description">Magic, worlds, and epic tales</span>
+                </a>
+                <a href="genres/fiction-mystery-thriller.html" class="category-card">
+                    <span class="title">🔍 Mystery & Thriller</span>
+                    <span class="description">Suspense, crime, and tension</span>
+                </a>
+                <a href="genres/fiction-classics.html" class="category-card">
+                    <span class="title">🏛️ Classics</span>
+                    <span class="description">Timeless stories that endure</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-decoration"></div>
+        <p>&copy; <span id="current-year">2026</span> Olem's Reading List. All rights reserved.</p>
+        <p class="footer-quote">"The more that you read, the more things you will know. The more that you learn, the more places you'll go." - Dr. Seuss</p>
+    </footer>
+
+    <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 19V5M5 12l7-7 7 7"/>
+        </svg>
+    </button>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
