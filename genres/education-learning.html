@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Education & Learning - Olem's Reading List</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <meta name="description" content="How we learn, teach, and master skills.">
+    <link rel="icon" href="../olem.png" sizes="any">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Olem's Reading List</h1>
+        <p>Showcasing books I've read with reviews and analysis.</p>
+        <div class="header-decoration"></div>
+        <button class="openbtn" onclick="openNav()" aria-label="Open navigation menu">☰ Menu</button>
+    </header>
+
+    <nav id="mySidenav" class="sidenav">
+        <button class="closebtn" onclick="closeNav()" aria-label="Close navigation menu">&times;</button>
+        <ul>
+            <li><a href="../index.html">🏠 Home</a></li>
+            <li class="category-title">📚 Nonfiction</li>
+            <li><a href="biographies-memoirs.html">👤 Biographies & Memoirs</a></li>
+            <li><a href="business-economics.html">📈 Business & Economics</a></li>
+            <li><a href="computer-science.html">💻 Computer Science</a></li>
+            <li><a href="design-creativity.html">🎨 Design & Creativity</a></li>
+            <li><a href="education-learning.html" aria-current="page">📚 Education & Learning</a></li>
+            <li><a href="finance-wealth.html">💰 Finance & Wealth</a></li>
+            <li><a href="history-politics.html">📜 History & Politics</a></li>
+            <li><a href="law-ethics.html">⚖️ Law & Ethics</a></li>
+            <li><a href="mathematics.html">🔢 Mathematics</a></li>
+            <li><a href="personal-development.html">🧠 Personal Development</a></li>
+            <li><a href="philosophy.html">🤔 Philosophy</a></li>
+            <li><a href="physical-exercise-health.html">💪 Physical Exercise & Health</a></li>
+            <li><a href="psychology-sociology.html">🧪 Psychology & Sociology</a></li>
+            <li><a href="science-technology.html">🔬 Science & Technology</a></li>
+            <li><a href="true-crime.html">🔪 True Crime</a></li>
+            <li class="category-title">📖 Fiction</li>
+            <li><a href="fiction-literature.html">📖 Fiction & Literature</a></li>
+            <li><a href="fiction-short-stories.html">📚 Short Stories</a></li>
+            <li><a href="fiction-science-fiction.html">🚀 Science Fiction</a></li>
+            <li><a href="fiction-fantasy.html">🧙 Fantasy</a></li>
+            <li><a href="fiction-mystery-thriller.html">🔍 Mystery & Thriller</a></li>
+            <li><a href="fiction-classics.html">🏛️ Classics</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="intro-section">
+            <h2>📚 Education & Learning</h2>
+            <p>How we learn, teach, and master skills.</p>
+            <div class="category-stats">
+                <span class="stat-badge">📚 3 Books</span>
+                <span class="stat-badge">⭐ Avg Rating: 7.7</span>
+            </div>
+        </section>
+
+        <section class="book-section">
+            <div class="section-header">
+                <h2>📖 The Learning Process</h2>
+                <p>Understanding how we acquire and master knowledge</p>
+            </div>
+            
+            <div class="book-grid">
+                <a href="../reviews/education-learning/how-to-read-a-book.html" class="book-card">
+                    <div class="rating-badge rating-7">7</div>
+                    <img src="../img/education-learning/how-to-read-a-book.jpg" alt="How to Read a Book by Mortimer Adler" loading="lazy">
+                    <div class="book-title">
+                        <h3>How to Read a Book</h3>
+                        <span class="book-subtitle">Mortimer Adler</span>
+                    </div>
+                    <div class="book-tags">
+                        <span class="book-tag">Reading</span>
+                        <span class="book-tag">Comprehension</span>
+                        <span class="book-tag">Classic</span>
+                    </div>
+                </a>
+
+                <a href="../reviews/education-learning/how-to-take-smart-notes.html" class="book-card">
+                    <div class="rating-badge rating-8">8</div>
+                    <img src="../img/education-learning/how-to-take-smart-notes.jpg" alt="How to Take Smart Notes by Sönke Ahrens" loading="lazy">
+                    <div class="book-title">
+                        <h3>How to Take Smart Notes</h3>
+                        <span class="book-subtitle">Sönke Ahrens</span>
+                    </div>
+                    <div class="book-tags">
+                        <span class="book-tag">Zettelkasten</span>
+                        <span class="book-tag">Note-Taking</span>
+                        <span class="book-tag">Writing</span>
+                    </div>
+                </a>
+
+                <a href="../reviews/education-learning/art-of-learning.html" class="book-card">
+                    <div class="rating-badge rating-8">8</div>
+                    <img src="../img/education-learning/art-of-learning.jpg" alt="The Art of Learning by Josh Waitzkin" loading="lazy">
+                    <div class="book-title">
+                        <h3>The Art of Learning</h3>
+                        <span class="book-subtitle">Josh Waitzkin</span>
+                    </div>
+                    <div class="book-tags">
+                        <span class="book-tag">Mastery</span>
+                        <span class="book-tag">Performance</span>
+                        <span class="book-tag">Psychology</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-decoration"></div>
+        <p>&copy; <span id="current-year">2026</span> Olem's Reading List. All rights reserved.</p>
+        <p class="footer-quote">"The more that you read, the more things you will know. The more that you learn, the more places you'll go." - Dr. Seuss</p>
+    </footer>
+
+    <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 19V5M5 12l7-7 7 7"/>
+        </svg>
+    </button>
+
+    <script src="../js/app.js"></script>
+</body>
+</html>
