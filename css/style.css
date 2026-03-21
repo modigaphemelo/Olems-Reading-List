@@ -952,3 +952,13 @@ a:focus {
     outline: 2px solid var(--accent-blue-light);
     outline-offset: 2px;
   }
+.book-count {
+    font-size: 0.8rem;
+    font-weight: normal;
+    color: var(--text-muted);
+    margin-left: 0.25rem;
+}
+
+.category-card .title {
+    display: inline-block;
+    }
